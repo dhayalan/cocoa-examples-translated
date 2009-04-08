@@ -1,0 +1,4 @@
+Apple supplies a number of Cocoa examples in
+/Developer/Examples. This project translates them into
+RubyCocoa and MacRuby to make it easier for Ruby programmers
+to see how to do various things.
