@@ -8,13 +8,11 @@ NumTiles=TileGridSize * TileGridSize
 
 
 
-# class TilesView < NSView
-class TilesView
-=begin
+class TilesView < NSView
 
   ib_outlet :delegate
+  attr_reader :delegate
 
-=end
   def awakeFromNib
     NSNotificationCenter.defaultCenter.objc_send(:addObserver, self,
                                                  :selector, 'didUndo:',

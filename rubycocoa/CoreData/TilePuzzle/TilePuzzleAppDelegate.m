@@ -51,6 +51,9 @@ Copyright � 2005 Apple Computer, Inc., All Rights Reserved
 
 NSString * const kPuzzleImageName = @"TigerPuzzle.png";
 
+int kTileGridSize = 4;
+int kNumTiles = 16;
+
 @implementation TilePuzzleAppDelegate
 
 - (id) init {

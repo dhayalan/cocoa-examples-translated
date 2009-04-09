@@ -60,7 +60,7 @@ Copyright © 2005 Apple Computer, Inc., All Rights Reserved
 - (id) executeTileFetch:(NSFetchRequest *)request;
 - (id) delegate;
 
-const extern int kTileGridSize;
-const extern int kNumTiles;
+								       // const extern int kTileGridSize;
+								       // const extern int kNumTiles;
 
 @end

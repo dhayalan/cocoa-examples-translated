@@ -13,6 +13,20 @@
 			7837DD660F8D53E100EDF6A8 /* TilePuzzle */,
 		);
 		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					131,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
@@ -35,6 +49,28 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					203,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
 			PBXPerProjectTemplateStateSaveDate = 261001480;
 			PBXWorkspaceStateSaveDate = 261001480;
 		};
@@ -43,9 +79,24 @@
 			7837DD720F8E7EA100EDF6A8 = 7837DD720F8E7EA100EDF6A8 /* XDModelBookmark */;
 			78BD9D030F8E91210031A3E7 /* XDModelBookmark */ = 78BD9D030F8E91210031A3E7 /* XDModelBookmark */;
 			78BD9D110F8E97C70031A3E7 /* XDModelBookmark */ = 78BD9D110F8E97C70031A3E7 /* XDModelBookmark */;
+			78BD9D600F8EA6510031A3E7 /* PBXTextBookmark */ = 78BD9D600F8EA6510031A3E7 /* PBXTextBookmark */;
+			78BD9D610F8EA6510031A3E7 /* PBXTextBookmark */ = 78BD9D610F8EA6510031A3E7 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 7837DD6B0F8D53FF00EDF6A8 /* Source Control */;
 		userBuildSettings = {
+		};
+	};
+	58014D0407B9774500EF665C /* TilesView.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = TilesView.m;
+		path = "/Users/marick/src/publish/cocoa-examples-translated/rubycocoa/CoreData/TilePuzzle/TilesView.m";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {464, 3584}}";
+			sepNavSelRange = "{10364, 0}";
+			sepNavVisRange = "{10197, 167}";
 		};
 	};
 	770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */ = {
@@ -95,7 +146,7 @@
 						isCollapsed = yes;
 						sizes = (
 							"{{0, 0}, {888, 220}}",
-							"{{0, 225}, {888, 540}}",
+							"{{0, 225}, {888, 517}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -202,8 +253,9 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{-113, -47}, {873, 525}}";
+				"xdesign model diagram view visible rect key" = "{{-113, -35}, {873, 502}}";
 			};
+			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
 	};
 	7837DD660F8D53E100EDF6A8 /* TilePuzzle */ = {
@@ -575,6 +627,24 @@
 			"xdesign model selected properties key" = (
 			);
 		};
+	};
+	78BD9D600F8EA6510031A3E7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: 'return' with a value, in function returning void";
+		fRef = 58014D0407B9774500EF665C /* TilesView.m */;
+		rLen = 1;
+		rLoc = 233;
+		rType = 1;
+	};
+	78BD9D610F8EA6510031A3E7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 58014D0407B9774500EF665C /* TilesView.m */;
+		name = "TilesView.m: 238";
+		rLen = 0;
+		rLoc = 10364;
+		rType = 0;
+		vrLen = 167;
+		vrLoc = 10197;
 	};
 	8D1107260486CEB800E47090 /* TilePuzzle */ = {
 		activeExec = 0;

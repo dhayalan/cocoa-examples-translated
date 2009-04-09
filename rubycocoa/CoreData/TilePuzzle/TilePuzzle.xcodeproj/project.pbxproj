@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1DFCA31207C49B82002C69BD /* TigerPuzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFCA31107C49B82002C69BD /* TigerPuzzle.png */; };
-		58014D0507B9774500EF665C /* TilesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58014D0407B9774500EF665C /* TilesView.m */; };
 		770B37ED0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */; };
 		77C8280D06725ACE000B614F /* TilePuzzleAppDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = 77C8280B06725ACE000B614F /* TilePuzzleAppDelegate.h */; };
 		77C8280E06725ACE000B614F /* TilePuzzleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* TilePuzzleAppDelegate.m */; };
@@ -30,8 +29,6 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* TilePuzzle_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilePuzzle_Prefix.pch; sourceTree = "<group>"; };
-		58014D0307B9774500EF665C /* TilesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilesView.h; sourceTree = "<group>"; };
-		58014D0407B9774500EF665C /* TilesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilesView.m; sourceTree = "<group>"; };
 		770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = TilePuzzle_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* TilePuzzleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilePuzzleAppDelegate.h; sourceTree = "<group>"; };
@@ -60,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				78BD9D300F8E99170031A3E7 /* TilesView.rb */,
-				58014D0307B9774500EF665C /* TilesView.h */,
-				58014D0407B9774500EF665C /* TilesView.m */,
 				77C8280B06725ACE000B614F /* TilePuzzleAppDelegate.h */,
 				77C8280C06725ACE000B614F /* TilePuzzleAppDelegate.m */,
 			);
@@ -208,7 +203,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				77C8280E06725ACE000B614F /* TilePuzzleAppDelegate.m in Sources */,
 				770B37ED0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel in Sources */,
-				58014D0507B9774500EF665C /* TilesView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
