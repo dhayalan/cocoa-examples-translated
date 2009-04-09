@@ -230,4 +230,8 @@ const int kNumTiles = TILE_GRID_SIZE * TILE_GRID_SIZE;
     return YES;
 }
 
+- (id) delegate {
+    return delegate;
+}
+
 @end

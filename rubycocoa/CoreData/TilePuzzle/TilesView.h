@@ -58,6 +58,7 @@ Copyright © 2005 Apple Computer, Inc., All Rights Reserved
 - (void) drawTileAtX:(int)xPosition andY:(int)yPosition inRect:(NSRect)rect;
 - (BOOL) isOpaque;
 - (id) executeTileFetch:(NSFetchRequest *)request;
+- (id) delegate;
 
 const extern int kTileGridSize;
 const extern int kNumTiles;
