@@ -57,6 +57,8 @@ Copyright © 2005 Apple Computer, Inc., All Rights Reserved
     NSImage *puzzleImage;
 }
 
+@property (assign) BOOL isShowingSolution;
+
 - (NSManagedObjectModel *) managedObjectModel;
 - (NSManagedObjectContext *) managedObjectContext;
 

@@ -55,6 +55,7 @@ int kTileGridSize = 4;
 int kNumTiles = 16;
 
 @implementation TilePuzzleAppDelegate
+@synthesize isShowingSolution;
 
 - (id) init {
     self = [super init];
