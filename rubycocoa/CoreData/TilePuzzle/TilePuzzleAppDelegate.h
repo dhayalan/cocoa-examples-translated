@@ -58,6 +58,7 @@ Copyright © 2005 Apple Computer, Inc., All Rights Reserved
 }
 
 @property (assign) BOOL isShowingSolution;
+@property (retain) NSWindow *window;
 
 - (NSManagedObjectModel *) managedObjectModel;
 - (NSManagedObjectContext *) managedObjectContext;

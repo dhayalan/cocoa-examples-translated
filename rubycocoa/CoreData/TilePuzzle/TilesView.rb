@@ -39,6 +39,7 @@ class TilesView < OSX::NSView
   end
 
   def drawTileAtX_andY_inRect(xPosition, yPosition, rect)
+    puts "Drawing with isShowingSolution: #{delegate.valueForKey('isShowingSolution').boolValue}"
     if delegate.valueForKey("isShowingSolution").boolValue
       fetchedTile = fetchTileAtCorrectX_andY(xPosition, yPosition)
     else
@@ -64,7 +65,7 @@ class TilesView < OSX::NSView
                                    nil)
     request = delegate.managedObjectModel.
       objc_send(:fetchRequestFromTemplateWithName, "tileAtCorrectXAndY",
-                :substitutionVariables, substitutionVariables)
+                :substitutionVariables, substitutionVars)
     executeTileFetch(request)
   end
 
@@ -111,7 +112,7 @@ class TilesView < OSX::NSView
   def mouseDown(event)
     # puts "mouseDown"
     if delegate.valueForKey("isShowingSolution").boolValue 
-      delegate.objc_send(:setValue, NSNumber.numberWithBool(NO),
+      delegate.objc_send(:setValue, NSNumber.numberWithBool(false),
                          :forKey, "isShowingSolution")
     else
       viewWidth = NSWidth(bounds)

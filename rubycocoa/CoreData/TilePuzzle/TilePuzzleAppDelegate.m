@@ -56,6 +56,7 @@ int kNumTiles = 16;
 
 @implementation TilePuzzleAppDelegate
 @synthesize isShowingSolution;
+@synthesize window;
 
 - (id) init {
     self = [super init];
@@ -136,6 +137,8 @@ int kNumTiles = 16;
         [[NSApplication sharedApplication] presentError:error];
     }    
     [coordinator release];
+    
+    NSLog(NSXMLStoreType);
     
     // If we are creating a new store instead of loading a pre-existing one, we create the
     // managed objects represeting the tiles.
