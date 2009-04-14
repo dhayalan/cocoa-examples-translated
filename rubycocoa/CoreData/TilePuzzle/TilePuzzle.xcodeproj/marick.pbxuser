@@ -74,25 +74,9 @@
 			PBXPerProjectTemplateStateSaveDate = 261415714;
 			PBXWorkspaceStateSaveDate = 261415714;
 		};
-		perUserProjectItems = {
-			7837DD6A0F8D53FC00EDF6A8 = 7837DD6A0F8D53FC00EDF6A8 /* PBXBookmark */;
-			7837DD720F8E7EA100EDF6A8 = 7837DD720F8E7EA100EDF6A8 /* XDModelBookmark */;
-			78BD9D030F8E91210031A3E7 = 78BD9D030F8E91210031A3E7 /* XDModelBookmark */;
-			78BD9D110F8E97C70031A3E7 = 78BD9D110F8E97C70031A3E7 /* XDModelBookmark */;
-			78BD9D600F8EA6510031A3E7 = 78BD9D600F8EA6510031A3E7 /* PBXTextBookmark */;
-			78BD9D610F8EA6510031A3E7 = 78BD9D610F8EA6510031A3E7 /* PBXTextBookmark */;
-		};
 		sourceControlManager = 7837DD6B0F8D53FF00EDF6A8 /* Source Control */;
 		userBuildSettings = {
 		};
-	};
-	58014D0407B9774500EF665C /* TilesView.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = TilesView.m;
-		path = "/Users/marick/src/publish/cocoa-examples-translated/rubycocoa/CoreData/TilePuzzle/TilesView.m";
-		sourceTree = "<absolute>";
 	};
 	770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */ = {
 		uiCtxt = {
@@ -274,12 +258,10 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = TilePuzzle;
+		savedGlobals = {
+		};
 		sourceDirectories = (
 		);
-	};
-	7837DD6A0F8D53FC00EDF6A8 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
 	};
 	7837DD6B0F8D53FF00EDF6A8 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -291,39 +273,6 @@
 	7837DD6C0F8D53FF00EDF6A8 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	7837DD720F8E7EA100EDF6A8 /* XDModelBookmark */ = {
-		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-		fallbackIsa = PBXBookmark;
-	};
-	78BD9D030F8E91210031A3E7 /* XDModelBookmark */ = {
-		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-		fallbackIsa = PBXBookmark;
-	};
-	78BD9D110F8E97C70031A3E7 /* XDModelBookmark */ = {
-		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-		fallbackIsa = PBXBookmark;
-	};
-	78BD9D600F8EA6510031A3E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "warning: 'return' with a value, in function returning void";
-		fRef = 58014D0407B9774500EF665C /* TilesView.m */;
-		rLen = 1;
-		rLoc = 233;
-		rType = 1;
-	};
-	78BD9D610F8EA6510031A3E7 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 58014D0407B9774500EF665C /* TilesView.m */;
-		name = "TilesView.m: 238";
-		rLen = 0;
-		rLoc = 10364;
-		rType = 0;
-		vrLen = 167;
-		vrLoc = 10197;
 	};
 	8D1107260486CEB800E47090 /* TilePuzzle */ = {
 		activeExec = 0;

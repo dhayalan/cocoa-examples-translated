@@ -1,12 +1,16 @@
 require 'constants'
 require 'TilesView'
 
-module OSX
-class TilePuzzleAppDelegate
+class TilePuzzleAppDelegate < OSX::NSObject
   include OSX
+
+  ib_outlet :window
+  kvc_reader :isShowingSolution
+  kvc_reader :puzzleImage
+  
   def init
     super_init
-    isShowingSolution = false
+    @isShowingSolution = false
     imagePath = NSBundle.mainBundle.pathForImageResource(PuzzleImageName)
     @puzzleImage = NSImage.alloc.initWithContentsOfFile(imagePath)
     self
@@ -149,15 +153,15 @@ class TilePuzzleAppDelegate
     end
     managedObjectContext.undoManager.endUndoGrouping
 
-    window.display
+    @window.display
   end
 
   def showSolution(sender)
-    self.isShowingSolution = true
-    puts "=== isShowingSolution: #{valueForKey('isShowingSolution').boolValue}"
+    @isShowingSolution = true
+    puts "=== @isShowingSolution: #{valueForKey('isShowingSolution').boolValue}"
     
     puts 'about to display'
-    window.display
+    @window.display
     puts 'done displaying'
   end
 
@@ -175,5 +179,4 @@ class TilePuzzleAppDelegate
     managedObjectContext.undoManager.endUndoGrouping
   end
 
-end
 end
