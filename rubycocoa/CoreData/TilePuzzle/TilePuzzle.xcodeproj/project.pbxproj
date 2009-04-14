@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		1DFCA31207C49B82002C69BD /* TigerPuzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DFCA31107C49B82002C69BD /* TigerPuzzle.png */; };
 		770B37ED0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */; };
-		77C8280D06725ACE000B614F /* TilePuzzleAppDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = 77C8280B06725ACE000B614F /* TilePuzzleAppDelegate.h */; };
-		77C8280E06725ACE000B614F /* TilePuzzleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* TilePuzzleAppDelegate.m */; };
 		786FBB350F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 786FBB340F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb */; };
 		786FBB390F94E50D00F29BAA /* constants.rb in Resources */ = {isa = PBXBuildFile; fileRef = 786FBB380F94E50D00F29BAA /* constants.rb */; };
+		786FBB470F94E73500F29BAA /* TilePuzzleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 786FBB450F94E73500F29BAA /* TilePuzzleAppDelegate.m */; };
 		78BD9D2A0F8E98990031A3E7 /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */; };
 		78BD9D2E0F8E98DD0031A3E7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */; };
 		78BD9D310F8E99170031A3E7 /* TilesView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D300F8E99170031A3E7 /* TilesView.rb */; };
@@ -33,10 +32,10 @@
 		32CA4F630368D1EE00C91783 /* TilePuzzle_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilePuzzle_Prefix.pch; sourceTree = "<group>"; };
 		770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = TilePuzzle_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		77C8280B06725ACE000B614F /* TilePuzzleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilePuzzleAppDelegate.h; sourceTree = "<group>"; };
-		77C8280C06725ACE000B614F /* TilePuzzleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilePuzzleAppDelegate.m; sourceTree = "<group>"; };
 		786FBB340F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TilePuzzleAppDelegate.rb; sourceTree = "<group>"; };
 		786FBB380F94E50D00F29BAA /* constants.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = constants.rb; sourceTree = "<group>"; };
+		786FBB450F94E73500F29BAA /* TilePuzzleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilePuzzleAppDelegate.m; sourceTree = "<group>"; };
+		786FBB460F94E73500F29BAA /* TilePuzzleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilePuzzleAppDelegate.h; sourceTree = "<group>"; };
 		78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		78BD9D300F8E99170031A3E7 /* TilesView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TilesView.rb; sourceTree = "<group>"; };
@@ -60,11 +59,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				786FBB450F94E73500F29BAA /* TilePuzzleAppDelegate.m */,
+				786FBB460F94E73500F29BAA /* TilePuzzleAppDelegate.h */,
 				786FBB380F94E50D00F29BAA /* constants.rb */,
 				786FBB340F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb */,
 				78BD9D300F8E99170031A3E7 /* TilesView.rb */,
-				77C8280B06725ACE000B614F /* TilePuzzleAppDelegate.h */,
-				77C8280C06725ACE000B614F /* TilePuzzleAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -192,7 +191,6 @@
 			files = (
 				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
-				77C8280D06725ACE000B614F /* TilePuzzleAppDelegate.h in Resources */,
 				1DFCA31207C49B82002C69BD /* TigerPuzzle.png in Resources */,
 				78BD9D2E0F8E98DD0031A3E7 /* rb_main.rb in Resources */,
 				78BD9D310F8E99170031A3E7 /* TilesView.rb in Resources */,
@@ -209,8 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				77C8280E06725ACE000B614F /* TilePuzzleAppDelegate.m in Sources */,
 				770B37ED0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel in Sources */,
+				786FBB470F94E73500F29BAA /* TilePuzzleAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

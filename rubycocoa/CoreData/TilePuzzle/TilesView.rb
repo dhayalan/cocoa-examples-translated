@@ -25,7 +25,7 @@ class TilesView < OSX::NSView
     tileOrigin = rect.origin.dup
     (0...TileGridSize).each do | x |
       (0...TileGridSize).each do | y |
-        puts "#{x}, #{y} and #{tileOrigin.x}, #{tileOrigin.y}"
+        # puts "#{x}, #{y} and #{tileOrigin.x}, #{tileOrigin.y}"
         
         gridRect = NSMakeRect(tileOrigin.x, tileOrigin.y,
                               tileSize.width, tileSize.height)
@@ -109,7 +109,7 @@ class TilesView < OSX::NSView
   end
 
   def mouseDown(event)
-    puts "mouseDown"
+    # puts "mouseDown"
     if delegate.valueForKey("isShowingSolution").boolValue 
       delegate.objc_send(:setValue, NSNumber.numberWithBool(NO),
                          :forKey, "isShowingSolution")
@@ -127,24 +127,21 @@ class TilesView < OSX::NSView
       blankTile = self.blankTile
       blankX = blankTile.valueForKey('xPosition').intValue
       blankY = blankTile.valueForKey('yPosition').intValue
-      puts "tileX #{tileX} tileY #{tileY} blankX #{blankX} blankY #{blankY}"
+      # puts "tileX #{tileX} tileY #{tileY} blankX #{blankX} blankY #{blankY}"
 
       if (tileX == blankX)
         distance = blankY - tileY
         if distance != -1 && distance != 1
-          puts "1"
           OSX.NSBeep
           return
         end
       elsif (tileY == blankY) 
         distance = blankX - tileX
         if distance != -1 && distance != 1
-          puts "2"
           OSX.NSBeep
           return
           end
       else
-        puts "3"
         OSX.NSBeep
         return;
       end
@@ -161,7 +158,7 @@ class TilesView < OSX::NSView
   end
 
   def isOpaque
-    puts "isOpaque called"
+    # puts "isOpaque called"
     true
   end
 end
