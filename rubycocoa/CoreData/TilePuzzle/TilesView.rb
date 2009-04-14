@@ -1,14 +1,8 @@
-
-require 'osx/cocoa'
-include OSX
-
-TileGridSize=4 
-NumTiles=TileGridSize * TileGridSize
+require 'constants'
 
 
-
-
-class TilesView < NSView
+class TilesView < OSX::NSView
+  include OSX
 
   ib_outlet :delegate
   attr_reader :delegate

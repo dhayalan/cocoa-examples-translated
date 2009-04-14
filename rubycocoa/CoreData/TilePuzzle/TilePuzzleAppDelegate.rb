@@ -1,1 +1,1 @@
-puts "App Delegate"
+require 'constants'
