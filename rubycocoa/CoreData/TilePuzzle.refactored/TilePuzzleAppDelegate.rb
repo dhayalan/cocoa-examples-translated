@@ -4,7 +4,7 @@ require 'TilesView'
 class TilePuzzleAppDelegate < OSX::NSObject
   include OSX
 
-  ib_outlet :window
+  ib_outlet :window, :puzzle
   kvc_reader :isShowingSolution
   kvc_reader :puzzleImage
   
@@ -17,49 +17,11 @@ class TilePuzzleAppDelegate < OSX::NSObject
   end
 
   def managedObjectModel
-    return @managedObjectModel if @managedObjectModel
-    
-    allBundles = NSMutableSet.alloc.init
-    allBundles.addObject(NSBundle.mainBundle)
-    allBundles.addObjectsFromArray(NSBundle.allFrameworks)
-
-    @managedObjectModel = NSManagedObjectModel.mergedModelFromBundles(allBundles.allObjects)
-    @managedObjectModel
-  end
-
-  def applicationSupportFolder
-    paths = OSX.NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, true)
-    paths[0].stringByAppendingPathComponent("TilePuzzle")
+    return @puzzle.managedObjectModel
   end
 
   def managedObjectContext
-    return @managedObjectContext if @managedObjectContext
-
-    fileManager = NSFileManager.defaultManager
-    unless fileManager.fileExistsAtPath(applicationSupportFolder)
-      fileManager.objc_send(:createDirectoryAtPath, applicationSupportFolder,
-                            :attributes, nil)
-    end
-
-    storeFilePath = applicationSupportFolder.stringByAppendingPathComponent("TilePuzzle.xml")
-    didCreateNewStoreFile = ! fileManager.fileExistsAtPath(storeFilePath)
-    
-    url = NSURL.fileURLWithPath(storeFilePath)
-    coordinator = NSPersistentStoreCoordinator.alloc.initWithManagedObjectModel(managedObjectModel)
-    coordinator.objc_send(:addPersistentStoreWithType, NSXMLStoreType,
-                          :configuration, nil,
-                          :URL, url,
-                          :options, nil,
-                          :error, nil)
-    @managedObjectContext = NSManagedObjectContext.alloc.init
-    @managedObjectContext.persistentStoreCoordinator = coordinator
-    
-    if (didCreateNewStoreFile)
-      createTiles(managedObjectContext)
-      managedObjectContext.undoManager.removeAllActions
-    end
-    puts "returning managedobjectcontext"
-    @managedObjectContext
+    @puzzle.managedObjectContext
   end
       
 

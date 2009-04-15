@@ -5,6 +5,7 @@ class TilesView < OSX::NSView
   include OSX
 
   ib_outlet :delegate
+  ib_outlet :puzzle
   attr_reader :delegate
 
   def awakeFromNib
@@ -39,7 +40,6 @@ class TilesView < OSX::NSView
   end
 
   def drawTileAtX_andY_inRect(xPosition, yPosition, rect)
-    puts "Drawing with isShowingSolution: #{delegate.valueForKey('isShowingSolution').boolValue}"
     if delegate.valueForKey("isShowingSolution").boolValue
       fetchedTile = fetchTileAtCorrectX_andY(xPosition, yPosition)
     else
