@@ -1,36 +1,5 @@
 require 'constants'
-
-class BoardPosition < OSX::NSObject
-  attr_reader :x, :y
-
-
-  def self.for_tile(tile, xkey, ykey)
-    x = tile.valueForKey(xkey).to_i
-    y = tile.valueForKey(ykey).to_i
-    at(x, y)
-  end
-
-  def self.at(x, y)
-    BoardPosition.alloc.initAtX_andY(x, y)
-  end
-
-  def initAtX_andY(x, y)
-    init
-    @x = x
-    @y = y
-    self
-  end
-
-  def ==(other)
-    self.x == other.x && self.y == other.y
-  end
-
-  def adjacent_to(other)
-    return true if (self.x == other.x) && (other.y - self.y).abs == 1
-    return true if (self.y == other.y) && (other.x - self.x).abs == 1
-    false
-  end
-end
+require 'BoardPosition'
 
 class Puzzle < OSX::NSObject
   include OSX
@@ -179,11 +148,11 @@ class Puzzle < OSX::NSObject
   def annotated(tiles)
 
     tiles.each do | tile |
-      def tile.correct_position
+      def tile.ending_position
         BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
       end
 
-      def tile.display_position
+      def tile.current_position
         BoardPosition.for_tile(self, "xPosition", "yPosition")
       end
     end
@@ -191,7 +160,7 @@ class Puzzle < OSX::NSObject
   end
 
   def moveable_tile?(tile_position)
-    tile_position.adjacent_to(blankTile.display_position)
+    tile_position.adjacent_to(blankTile.current_position)
   end
 
   def move_tile_at(tile_position)
@@ -205,5 +174,9 @@ class Puzzle < OSX::NSObject
     else
       error_block.call
     end
+  end
+
+  def undo_manager
+    managedObjectContext.undoManager
   end
 end

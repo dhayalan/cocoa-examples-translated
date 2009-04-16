@@ -1,42 +1,25 @@
 require 'constants'
+require 'util'
+require 'BoardPosition'
 
 class TilesView < OSX::NSView
   include OSX
+  include Utilities
 
   ib_outlet :delegate
   ib_outlet :puzzle
   attr_reader :delegate
 
+  # View protocol
+
   def awakeFromNib
     NSNotificationCenter.defaultCenter.objc_send(:addObserver, self,
                                                  :selector, 'didUndo:',
                                                  :name, nil,
-                                                 :object, @puzzle.managedObjectContext.undoManager)
+                                                 :object, @puzzle.undo_manager)
 
-    imagePath = NSBundle.mainBundle.pathForImageResource(PuzzleImageName)
-    @puzzle_image = NSImage.alloc.initWithContentsOfFile(imagePath)
-
-    def @puzzle_image.piece_size
-      NSSize.new(size.width / TileGridSize, size.height / TileGridSize)
-    end
-
-    def @puzzle_image.piece_rect(tile_position)
-      origin = NSPoint.new(piece_size.width * tile_position.x,
-                           piece_size.height * tile_position.y)
-      NSRect.new(origin, piece_size)
-    end
-
+    @puzzle_image = find_puzzle_image
     user_wants_to_solve_puzzle
-  end
-
-  def user_wants_to_solve_puzzle
-    @position_to_display = :display_position
-    @click_behavior = :move_piece
-  end
-
-  def user_wants_to_see_solution
-    @position_to_display = :correct_position
-    @click_behavior = :erase_solution_display
   end
 
   def drawRect(rect)
@@ -48,33 +31,46 @@ class TilesView < OSX::NSView
     end
   end
 
+  def mouseDown(event)
+    send(@click_behavior, tile_position_clicked(event))
+    setNeedsDisplay(true)
+  end
+
+  def didUndo(notification)
+    setNeedsDisplay(true)
+  end
+
+  def isOpaque; true; end
+
+
+  # Used by peer objects
+
+  def user_wants_to_solve_puzzle(*ignored)
+    @position_to_display = :current_position
+    @click_behavior = :move_tile
+  end
+
+  def user_wants_to_see_solution(*ignored)
+    @position_to_display = :ending_position
+    @click_behavior = :user_wants_to_solve_puzzle
+  end
+
+
+  private
+
   def draw_tile_in_rect(tile, rect)
     return if tile.entity.name == "BlankTile"
 
-    to = position_in_view_coordinates(tile.send(@position_to_display), rect)
-    from = @puzzle_image.piece_rect(tile.correct_position)
+    to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
+    from = @puzzle_image.tile_rect(tile.ending_position)
 
     @puzzle_image.objc_send(:compositeToPoint, to,
                             :fromRect, from,
                             :operation, NSCompositeCopy)
   end
 
-  def on_error(&block)
-    block
-  end
-
-  def mouseDown(event)
-    clicked = tile_position_clicked(event)
-    send(@click_behavior, clicked)
-    setNeedsDisplay(true)
-  end
-
-  def move_piece(clicked)
+  def move_tile(clicked)
     @puzzle.click_tile(clicked, on_error { OSX.NSBeep })
-  end
-
-  def erase_solution_display(clicked)
-    user_wants_to_solve_puzzle
   end
 
   def tile_position_clicked(event)
@@ -90,7 +86,7 @@ class TilesView < OSX::NSView
     BoardPosition.at(tileX, tileY)
   end
 
-  def position_in_view_coordinates(position, rect)
+  def tile_position_in_view_coordinates(position, rect)
     tileSize = NSSize.new
     tileSize.height = rect.size.height / TileGridSize
     tileSize.width = rect.size.width / TileGridSize
@@ -101,12 +97,21 @@ class TilesView < OSX::NSView
     NSPoint.new(rect.origin.x + tileX, rect.origin.y+tileY)
   end
 
-  def didUndo(notification)
-    setNeedsDisplay(true)
+  def find_puzzle_image
+    imagePath = NSBundle.mainBundle.pathForImageResource(PuzzleImageName)
+    puzzle_image = NSImage.alloc.initWithContentsOfFile(imagePath)
+
+    def puzzle_image.tile_size
+      NSSize.new(size.width / TileGridSize, size.height / TileGridSize)
+    end
+
+    def puzzle_image.tile_rect(tile_position)
+      origin = NSPoint.new(tile_size.width * tile_position.x,
+                           tile_size.height * tile_position.y)
+      NSRect.new(origin, tile_size)
+    end
+    puzzle_image
   end
 
-  def isOpaque
-    true
-  end
 end
 
