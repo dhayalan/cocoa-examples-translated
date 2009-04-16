@@ -149,9 +149,10 @@ class Puzzle < OSX::NSObject
 
     tiles.each do | tile |
 
-      def blank?
+      def tile.blank?
         entity.name == "BlankTile"
       end
+      
 
       def tile.ending_position
         BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
@@ -173,9 +174,9 @@ class Puzzle < OSX::NSObject
     swapTile_withTile(clickedTile, blankTile)
   end
 
-  def click_tile(tile, error_block)
-    if moveable_tile?(tile)
-      move_tile_at(tile)
+  def move_tile(tile_position, error_block)
+    if moveable_tile?(tile_position)
+      move_tile_at(tile_position)
     else
       error_block.call
     end

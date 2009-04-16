@@ -6,9 +6,7 @@ class TilesView < OSX::NSView
   include OSX
   include Utilities
 
-  ib_outlet :delegate
   ib_outlet :puzzle
-  attr_reader :delegate
 
   # View protocol
 
@@ -58,6 +56,10 @@ class TilesView < OSX::NSView
 
   private
 
+  def move_tile(tile_position)
+    @puzzle.move_tile(tile_position, on_error { OSX.NSBeep })
+  end
+
   def draw_tile_in_rect(tile, rect)
     return if tile.blank?
 
@@ -67,10 +69,6 @@ class TilesView < OSX::NSView
     @puzzle_image.objc_send(:compositeToPoint, to,
                             :fromRect, from,
                             :operation, NSCompositeCopy)
-  end
-
-  def move_tile(clicked)
-    @puzzle.click_tile(clicked, on_error { OSX.NSBeep })
   end
 
   def tile_position_clicked(event)
@@ -114,4 +112,3 @@ class TilesView < OSX::NSView
   end
 
 end
-
