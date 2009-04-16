@@ -32,70 +32,8 @@ class BoardPosition < OSX::NSObject
   end
 end
 
-class Behavior < OSX::NSObject
-  def initWithPuzzle(puzzle)
-    init
-    puts "Behavior = #{self.class}"
-    @puzzle = puzzle
-    self
-  end
-
-  def annotate(tile)
-    def tile.correct_position
-      BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
-    end
-  end
-
-  def click_tile(tile, error_block); subclass_responsibility; end
-  def piece_position_request_template; subclass_responsibility; end
-end
-
-class PuzzleSolvingBehavior < Behavior
-  def piece_position_request_template; 'tileAtXAndY'; end
-  def x_position_to_display; 'xPosition'; end
-  def y_position_to_display; 'yPosition'; end
-
-  def annotate(tile)
-    super
-    def tile.display_position
-      BoardPosition.for_tile(self, "xPosition", "yPosition")
-    end
-  end
-  
-  def click_tile(tile, error_block)
-    if @puzzle.moveable_tile?(tile)
-      @puzzle.move_tile_at(tile)
-    else
-      error_block.call
-    end
-  end
-end
-
-class SolutionDisplayingBehavior < Behavior
-  def piece_position_request_template; 'tileAtCorrectXAndY'; end
-  
-  def click_tile(tile, error_block)
-    @puzzle.configure_to_show_problem
-  end
-
-  def annotate(tile)
-    super
-    def tile.display_position
-      BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
-    end
-  end
-
-end
-
-
 class Puzzle < OSX::NSObject
   include OSX
-
-  def init
-    super_init
-    configure_to_show_problem
-    self
-  end
 
   def managedObjectModel
     return @managedObjectModel if @managedObjectModel
@@ -211,7 +149,7 @@ class Puzzle < OSX::NSObject
                                    NSNumber.numberWithInt(yPosition), 'y',
                                    nil)
     request = @managedObjectModel.
-      objc_send(:fetchRequestFromTemplateWithName, @behavior.piece_position_request_template,
+      objc_send(:fetchRequestFromTemplateWithName, 'tileAtXAndY',
                  :substitutionVariables, substitutionVars)
     executeTileFetch(request)
   end
@@ -239,8 +177,15 @@ class Puzzle < OSX::NSObject
   end
 
   def annotated(tiles)
+
     tiles.each do | tile |
-      @behavior.annotate(tile)
+      def tile.correct_position
+        BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
+      end
+
+      def tile.display_position
+        BoardPosition.for_tile(self, "xPosition", "yPosition")
+      end
     end
     tiles
   end
@@ -254,15 +199,11 @@ class Puzzle < OSX::NSObject
     swapTile_withTile(clickedTile, blankTile)
   end
 
-  def configure_to_show_solution
-    @behavior = SolutionDisplayingBehavior.alloc.initWithPuzzle(self)
-  end
-
-  def configure_to_show_problem
-    @behavior = PuzzleSolvingBehavior.alloc.initWithPuzzle(self)
-  end
-
   def click_tile(tile, error_block)
-    @behavior.click_tile(tile, error_block)
+    if moveable_tile?(tile)
+      move_tile_at(tile)
+    else
+      error_block.call
+    end
   end
 end

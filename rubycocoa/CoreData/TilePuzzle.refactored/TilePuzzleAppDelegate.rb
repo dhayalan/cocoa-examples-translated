@@ -4,7 +4,7 @@ require 'TilesView'
 class TilePuzzleAppDelegate < OSX::NSObject
   include OSX
 
-  ib_outlet :window, :puzzle
+  ib_outlet :window, :puzzle, :view
   
   # This is misleading. It looks like an action called from UI,
   # but it's only called internally.
@@ -55,7 +55,7 @@ class TilePuzzleAppDelegate < OSX::NSObject
   end
 
   def showSolution(sender)
-    @puzzle.configure_to_show_solution
+    @view.user_wants_to_see_solution
     @window.display
   end
 end

@@ -26,6 +26,17 @@ class TilesView < OSX::NSView
       NSRect.new(origin, piece_size)
     end
 
+    user_wants_to_solve_puzzle
+  end
+
+  def user_wants_to_solve_puzzle
+    @position_to_display = :display_position
+    @click_behavior = :move_piece
+  end
+
+  def user_wants_to_see_solution
+    @position_to_display = :correct_position
+    @click_behavior = :erase_solution_display
   end
 
   def drawRect(rect)
@@ -40,7 +51,7 @@ class TilesView < OSX::NSView
   def draw_tile_in_rect(tile, rect)
     return if tile.entity.name == "BlankTile"
 
-    to = position_in_view_coordinates(tile.display_position, rect)
+    to = position_in_view_coordinates(tile.send(@position_to_display), rect)
     from = @puzzle_image.piece_rect(tile.correct_position)
 
     @puzzle_image.objc_send(:compositeToPoint, to,
@@ -54,8 +65,16 @@ class TilesView < OSX::NSView
 
   def mouseDown(event)
     clicked = tile_position_clicked(event)
-    @puzzle.click_tile(clicked, on_error { OSX.NSBeep })
+    send(@click_behavior, clicked)
     setNeedsDisplay(true)
+  end
+
+  def move_piece(clicked)
+    @puzzle.click_tile(clicked, on_error { OSX.NSBeep })
+  end
+
+  def erase_solution_display(clicked)
+    user_wants_to_solve_puzzle
   end
 
   def tile_position_clicked(event)
