@@ -1,5 +1,6 @@
 require 'constants'
 require 'BoardPosition'
+require 'ApplicationSupport'
 
 class Puzzle < OSX::NSObject
   include OSX
@@ -15,30 +16,19 @@ class Puzzle < OSX::NSObject
     @managedObjectModel
   end
 
-  def applicationSupportFolder
-    paths = OSX.NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, true)
-    paths[0].stringByAppendingPathComponent("TilePuzzle")
-  end
-
   def managedObjectContext
     return @managedObjectContext if @managedObjectContext
 
-    fileManager = NSFileManager.defaultManager
-    unless fileManager.fileExistsAtPath(applicationSupportFolder)
-      fileManager.objc_send(:createDirectoryAtPath, applicationSupportFolder,
-                            :attributes, nil)
-    end
-
-    storeFilePath = applicationSupportFolder.stringByAppendingPathComponent("TilePuzzle.xml")
-    didCreateNewStoreFile = ! fileManager.fileExistsAtPath(storeFilePath)
+    app_support = ApplicationSupport.alloc.initForApp("TilePuzzle")
+    didCreateNewStoreFile = ! app_support.file_exists?("TilePuzzle.xml")
     
-    url = NSURL.fileURLWithPath(storeFilePath)
     coordinator = NSPersistentStoreCoordinator.alloc.initWithManagedObjectModel(managedObjectModel)
     coordinator.objc_send(:addPersistentStoreWithType, NSXMLStoreType,
                           :configuration, nil,
-                          :URL, url,
+                          :URL, app_support.file_url("TilePuzzle.xml"),
                           :options, nil,
                           :error, nil)
+
     @managedObjectContext = NSManagedObjectContext.alloc.init
     @managedObjectContext.persistentStoreCoordinator = coordinator
     

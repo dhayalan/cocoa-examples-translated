@@ -14,6 +14,7 @@
 		788425080F963444004FC92B /* Puzzle.rb in Resources */ = {isa = PBXBuildFile; fileRef = 788425070F963444004FC92B /* Puzzle.rb */; };
 		78B2AFA30F97CE1B00D2D6E9 /* util.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78B2AFA20F97CE1B00D2D6E9 /* util.rb */; };
 		78B2AFAC0F97CFDB00D2D6E9 /* BoardPosition.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78B2AFAB0F97CFDB00D2D6E9 /* BoardPosition.rb */; };
+		78B2AFC00F97DB4E00D2D6E9 /* ApplicationSupport.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78B2AFBF0F97DB4E00D2D6E9 /* ApplicationSupport.rb */; };
 		78BD9D2A0F8E98990031A3E7 /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */; };
 		78BD9D2E0F8E98DD0031A3E7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */; };
 		78BD9D310F8E99170031A3E7 /* TilesView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D300F8E99170031A3E7 /* TilesView.rb */; };
@@ -39,6 +40,7 @@
 		788425070F963444004FC92B /* Puzzle.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Puzzle.rb; sourceTree = "<group>"; };
 		78B2AFA20F97CE1B00D2D6E9 /* util.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = util.rb; sourceTree = "<group>"; };
 		78B2AFAB0F97CFDB00D2D6E9 /* BoardPosition.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = BoardPosition.rb; sourceTree = "<group>"; };
+		78B2AFBF0F97DB4E00D2D6E9 /* ApplicationSupport.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ApplicationSupport.rb; sourceTree = "<group>"; };
 		78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		78BD9D300F8E99170031A3E7 /* TilesView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TilesView.rb; sourceTree = "<group>"; };
@@ -62,10 +64,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				78B2AFBF0F97DB4E00D2D6E9 /* ApplicationSupport.rb */,
 				78B2AFAB0F97CFDB00D2D6E9 /* BoardPosition.rb */,
-				78B2AFA20F97CE1B00D2D6E9 /* util.rb */,
 				788425070F963444004FC92B /* Puzzle.rb */,
-				786FBB380F94E50D00F29BAA /* constants.rb */,
 				786FBB340F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb */,
 				78BD9D300F8E99170031A3E7 /* TilesView.rb */,
 			);
@@ -115,9 +116,11 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				786FBB380F94E50D00F29BAA /* constants.rb */,
 				78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */,
 				32CA4F630368D1EE00C91783 /* TilePuzzle_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				78B2AFA20F97CE1B00D2D6E9 /* util.rb */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				788425080F963444004FC92B /* Puzzle.rb in Resources */,
 				78B2AFA30F97CE1B00D2D6E9 /* util.rb in Resources */,
 				78B2AFAC0F97CFDB00D2D6E9 /* BoardPosition.rb in Resources */,
+				78B2AFC00F97DB4E00D2D6E9 /* ApplicationSupport.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
