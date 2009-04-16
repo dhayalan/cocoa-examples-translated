@@ -23,7 +23,6 @@ class TilesView < OSX::NSView
     def @puzzle_image.piece_rect(tile_position)
       origin = NSPoint.new(piece_size.width * tile_position.x,
                            piece_size.height * tile_position.y)
-      puts NSRect.new(origin, piece_size).inspect
       NSRect.new(origin, piece_size)
     end
 
@@ -40,12 +39,12 @@ class TilesView < OSX::NSView
 
   def draw_tile_in_rect(tile, rect)
     return if tile.entity.name == "BlankTile"
-    puts "To draw this tile:"
-    puts tile
-    puts "in this rect"
 
-    @puzzle_image.objc_send(:compositeToPoint, tile_display_position_in_view_coordinates(tile, rect),
-                            :fromRect, @puzzle_image.piece_rect(@puzzle.correct_position_of(tile)),
+    to = position_in_view_coordinates(tile.display_position, rect)
+    from = @puzzle_image.piece_rect(tile.correct_position)
+
+    @puzzle_image.objc_send(:compositeToPoint, to,
+                            :fromRect, from,
                             :operation, NSCompositeCopy)
   end
 
@@ -54,33 +53,31 @@ class TilesView < OSX::NSView
   end
 
   def mouseDown(event)
-    locationInView = event.locationInWindow
-    locationInView = convertPoint_fromView(locationInView, nil)
-    clicked = convert_to_tile_position(locationInView)
-
+    clicked = tile_position_clicked(event)
     @puzzle.click_tile(clicked, on_error { OSX.NSBeep })
-
     setNeedsDisplay(true)
   end
 
-  def convert_to_tile_position(locationInView)
+  def tile_position_clicked(event)
+    locationInView = event.locationInWindow
+    locationInView = convertPoint_fromView(locationInView, nil)
     viewWidth = NSWidth(bounds)
     viewHeight = NSHeight(bounds)
     tileX = (locationInView.x / viewWidth * TileGridSize).to_i
+    # Why is following check needed?
     tileX = tileX > TileGridSize - 1 ? TileGridSize - 1 : tileX
     tileY = (locationInView.y / viewHeight * TileGridSize).to_i
     tileY = tileY > TileGridSize - 1 ? TileGridSize - 1 : tileY
     BoardPosition.at(tileX, tileY)
   end
 
-  def tile_display_position_in_view_coordinates(tile, rect)
+  def position_in_view_coordinates(position, rect)
     tileSize = NSSize.new
     tileSize.height = rect.size.height / TileGridSize
     tileSize.width = rect.size.width / TileGridSize
 
-    tileX = @puzzle.display_position_of(tile).x * tileSize.width
-    tileY = @puzzle.display_position_of(tile).y * tileSize.height
-    puts "tile position in view coordinates: " +     NSPoint.new(rect.origin.x + tileX, rect.origin.y+tileY).inspect
+    tileX = position.x * tileSize.width
+    tileY = position.y * tileSize.height
 
     NSPoint.new(rect.origin.x + tileX, rect.origin.y+tileY)
   end
@@ -90,7 +87,6 @@ class TilesView < OSX::NSView
   end
 
   def isOpaque
-    # puts "isOpaque called"
     true
   end
 end

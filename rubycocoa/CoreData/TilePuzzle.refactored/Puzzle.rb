@@ -3,6 +3,13 @@ require 'constants'
 class BoardPosition < OSX::NSObject
   attr_reader :x, :y
 
+
+  def self.for_tile(tile, xkey, ykey)
+    x = tile.valueForKey(xkey).to_i
+    y = tile.valueForKey(ykey).to_i
+    at(x, y)
+  end
+
   def self.at(x, y)
     BoardPosition.alloc.initAtX_andY(x, y)
   end
@@ -33,16 +40,27 @@ class Behavior < OSX::NSObject
     self
   end
 
+  def annotate(tile)
+    def tile.correct_position
+      BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
+    end
+  end
+
   def click_tile(tile, error_block); subclass_responsibility; end
   def piece_position_request_template; subclass_responsibility; end
-  def x_position_to_display; subclass_responsibility; end
-  def y_position_to_display; subclass_responsibility; end
 end
 
 class PuzzleSolvingBehavior < Behavior
   def piece_position_request_template; 'tileAtXAndY'; end
-  def x_position_to_display; puts "xPosition"; 'xPosition'; end
+  def x_position_to_display; 'xPosition'; end
   def y_position_to_display; 'yPosition'; end
+
+  def annotate(tile)
+    super
+    def tile.display_position
+      BoardPosition.for_tile(self, "xPosition", "yPosition")
+    end
+  end
   
   def click_tile(tile, error_block)
     if @puzzle.moveable_tile?(tile)
@@ -55,12 +73,18 @@ end
 
 class SolutionDisplayingBehavior < Behavior
   def piece_position_request_template; 'tileAtCorrectXAndY'; end
-  def x_position_to_display; puts "correct x position"; 'correctXPosition'; end
-  def y_position_to_display; 'correctYPosition'; end
   
   def click_tile(tile, error_block)
     @puzzle.configure_to_show_problem
   end
+
+  def annotate(tile)
+    super
+    def tile.display_position
+      BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
+    end
+  end
+
 end
 
 
@@ -115,7 +139,6 @@ class Puzzle < OSX::NSObject
       createTiles(managedObjectContext)
       managedObjectContext.undoManager.removeAllActions
     end
-    puts "returning managedobjectcontext"
     @managedObjectContext
   end
 
@@ -159,15 +182,13 @@ class Puzzle < OSX::NSObject
       swapTile_withTile(fetchedTiles[i], fetchedTiles[rand(NumTiles)])
     end
     managedObjectContext.undoManager.endUndoGrouping
-
-    @window.display
   end
 
   def all_tiles
     request = managedObjectModel.fetchRequestTemplateForName("allTiles")
     fetchedTiles = managedObjectContext.objc_send(:executeFetchRequest, request,
                                                   :error, nil)
-    fetchedTiles
+    annotated(fetchedTiles)
   end
 
   def swapTile_withTile(firstTile, secondTile)
@@ -203,7 +224,7 @@ class Puzzle < OSX::NSObject
       NSApplication.sharedApplication.presentError(fetchError)
       NSApplication.sharedApplication.terminate(self)
     end
-    fetchedTiles[0]
+    annotated(fetchedTiles)[0]
   end
 
   def blankTile
@@ -214,29 +235,18 @@ class Puzzle < OSX::NSObject
     fetchedTiles = @managedObjectContext.objc_send(:executeFetchRequest, request,
                                      :error, nil)
 
-    fetchedTiles[0]
+    annotated(fetchedTiles)[0]
   end
 
-  def correct_position_of(tile)
-    x = tile.valueForKey("correctXPosition").to_i
-    y = tile.valueForKey("correctYPosition").to_i
-    BoardPosition.at(x, y)
-  end
-
-  def display_position_of(tile)
-    x = tile.valueForKey(@behavior.x_position_to_display).to_i
-    y = tile.valueForKey(@behavior.y_position_to_display).to_i
-    BoardPosition.at(x, y)
-  end
-
-  def blank_tile_position
-    blankX = blankTile.valueForKey('xPosition').intValue
-    blankY = blankTile.valueForKey('yPosition').intValue
-    BoardPosition.at(blankX, blankY)
+  def annotated(tiles)
+    tiles.each do | tile |
+      @behavior.annotate(tile)
+    end
+    tiles
   end
 
   def moveable_tile?(tile_position)
-    tile_position.adjacent_to(blank_tile_position)
+    tile_position.adjacent_to(blankTile.display_position)
   end
 
   def move_tile_at(tile_position)
