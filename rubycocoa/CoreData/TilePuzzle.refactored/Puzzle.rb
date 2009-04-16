@@ -1,42 +1,23 @@
 require 'constants'
 require 'BoardPosition'
 require 'ApplicationSupport'
+require 'PersistentStore'
 
 class Puzzle < OSX::NSObject
   include OSX
 
-  def managedObjectModel
-    return @managedObjectModel if @managedObjectModel
-    
-    allBundles = NSMutableSet.alloc.init
-    allBundles.addObject(NSBundle.mainBundle)
-    allBundles.addObjectsFromArray(NSBundle.allFrameworks)
+  def init
+    super_init
+    @persistent_store = PersistentStore.alloc.init
+    self
+  end
 
-    @managedObjectModel = NSManagedObjectModel.mergedModelFromBundles(allBundles.allObjects)
-    @managedObjectModel
+  def managedObjectModel
+    @persistent_store.managedObjectModel
   end
 
   def managedObjectContext
-    return @managedObjectContext if @managedObjectContext
-
-    app_support = ApplicationSupport.alloc.initForApp("TilePuzzle")
-    didCreateNewStoreFile = ! app_support.file_exists?("TilePuzzle.xml")
-    
-    coordinator = NSPersistentStoreCoordinator.alloc.initWithManagedObjectModel(managedObjectModel)
-    coordinator.objc_send(:addPersistentStoreWithType, NSXMLStoreType,
-                          :configuration, nil,
-                          :URL, app_support.file_url("TilePuzzle.xml"),
-                          :options, nil,
-                          :error, nil)
-
-    @managedObjectContext = NSManagedObjectContext.alloc.init
-    @managedObjectContext.persistentStoreCoordinator = coordinator
-    
-    if (didCreateNewStoreFile)
-      createTiles(managedObjectContext)
-      managedObjectContext.undoManager.removeAllActions
-    end
-    @managedObjectContext
+    @persistent_store.managedObjectContext
   end
 
   def createTiles(context)
@@ -74,48 +55,41 @@ class Puzzle < OSX::NSObject
   def shuffle
     fetchedTiles = all_tiles
     
-    managedObjectContext.undoManager.beginUndoGrouping
-    (0...NumTiles).each do | i | 
-      swapTile_withTile(fetchedTiles[i], fetchedTiles[rand(NumTiles)])
+    @persistent_store.undoably do 
+      (0...NumTiles).each do | i | 
+        swapTile_withTile(fetchedTiles[i], fetchedTiles[rand(NumTiles)])
+      end
     end
-    managedObjectContext.undoManager.endUndoGrouping
   end
 
   def all_tiles
-    request = managedObjectModel.fetchRequestTemplateForName("allTiles")
-    fetchedTiles = managedObjectContext.objc_send(:executeFetchRequest, request,
-                                                  :error, nil)
-    annotated(fetchedTiles)
+    annotated(@persistent_store.fetch_by_name("allTiles"))
   end
 
   def swapTile_withTile(firstTile, secondTile)
     firstX = firstTile.valueForKey("xPosition")
     firstY = firstTile.valueForKey("yPosition")
-    
-    managedObjectContext.undoManager.beginUndoGrouping
-    firstTile.setValue_forKey(secondTile.valueForKey("xPosition"),
-                              "xPosition")
-    firstTile.setValue_forKey(secondTile.valueForKey("yPosition"),
-                              "yPosition")
-    secondTile.setValue_forKey(firstX, "xPosition")
-    secondTile.setValue_forKey(firstY, "yPosition")
-    managedObjectContext.undoManager.endUndoGrouping
+
+    @persistent_store.undoably do 
+      firstTile.setValue_forKey(secondTile.valueForKey("xPosition"),
+                                "xPosition")
+      firstTile.setValue_forKey(secondTile.valueForKey("yPosition"),
+                                "yPosition")
+      secondTile.setValue_forKey(firstX, "xPosition")
+      secondTile.setValue_forKey(firstY, "yPosition")
+    end
   end
 
   def piece_at(xPosition, yPosition)
-    substitutionVars = NSDictionary.
-      dictionaryWithObjectsAndKeys(NSNumber.numberWithInt(xPosition), 'x',
-                                   NSNumber.numberWithInt(yPosition), 'y',
-                                   nil)
-    request = @managedObjectModel.
-      objc_send(:fetchRequestFromTemplateWithName, 'tileAtXAndY',
-                 :substitutionVariables, substitutionVars)
-    executeTileFetch(request)
+    result = @persistent_store.fetch_by_name("tileAtXAndY", 
+                                             'x' => xPosition,
+                                             'y' => yPosition)
+    annotated(result)[0]
   end
 
 
   def executeTileFetch(request)
-    fetchedTiles, fetchError = @managedObjectContext.objc_send(:executeFetchRequest, request,
+    fetchedTiles, fetchError = managedObjectContext.objc_send(:executeFetchRequest, request,
                                                  :error)
     if fetchedTiles == nil
       NSApplication.sharedApplication.presentError(fetchError)
@@ -126,10 +100,10 @@ class Puzzle < OSX::NSObject
 
   def blankTile
     request = NSFetchRequest.alloc.init
-    entity = @managedObjectModel.entitiesByName.objectForKey("BlankTile")
+    entity = managedObjectModel.entitiesByName.objectForKey("BlankTile")
     request.setEntity entity
     
-    fetchedTiles = @managedObjectContext.objc_send(:executeFetchRequest, request,
+    fetchedTiles = managedObjectContext.objc_send(:executeFetchRequest, request,
                                      :error, nil)
 
     annotated(fetchedTiles)[0]
