@@ -59,7 +59,7 @@ class TilesView < OSX::NSView
   private
 
   def draw_tile_in_rect(tile, rect)
-    return if tile.entity.name == "BlankTile"
+    return if tile.blank?
 
     to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
     from = @puzzle_image.tile_rect(tile.ending_position)

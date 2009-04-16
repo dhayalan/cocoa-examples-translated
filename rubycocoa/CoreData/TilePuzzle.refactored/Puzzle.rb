@@ -148,6 +148,11 @@ class Puzzle < OSX::NSObject
   def annotated(tiles)
 
     tiles.each do | tile |
+
+      def blank?
+        entity.name == "BlankTile"
+      end
+
       def tile.ending_position
         BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
       end
