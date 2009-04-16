@@ -23,15 +23,53 @@ class BoardPosition < OSX::NSObject
     return true if (self.y == other.y) && (other.x - self.x).abs == 1
     false
   end
-
 end
+
+class Behavior < OSX::NSObject
+  def initWithPuzzle(puzzle)
+    init
+    puts "Behavior = #{self.class}"
+    @puzzle = puzzle
+    self
+  end
+
+  def click_tile(tile, error_block); subclass_responsibility; end
+  def piece_position_request_template; subclass_responsibility; end
+  def x_position_to_display; subclass_responsibility; end
+  def y_position_to_display; subclass_responsibility; end
+end
+
+class PuzzleSolvingBehavior < Behavior
+  def piece_position_request_template; 'tileAtXAndY'; end
+  def x_position_to_display; puts "xPosition"; 'xPosition'; end
+  def y_position_to_display; 'yPosition'; end
+  
+  def click_tile(tile, error_block)
+    if @puzzle.moveable_tile?(tile)
+      @puzzle.move_tile_at(tile)
+    else
+      error_block.call
+    end
+  end
+end
+
+class SolutionDisplayingBehavior < Behavior
+  def piece_position_request_template; 'tileAtCorrectXAndY'; end
+  def x_position_to_display; puts "correct x position"; 'correctXPosition'; end
+  def y_position_to_display; 'correctYPosition'; end
+  
+  def click_tile(tile, error_block)
+    @puzzle.configure_to_show_problem
+  end
+end
+
 
 class Puzzle < OSX::NSObject
   include OSX
 
   def init
     super_init
-    puts "init puzzle"
+    configure_to_show_problem
     self
   end
 
@@ -129,7 +167,7 @@ class Puzzle < OSX::NSObject
     request = managedObjectModel.fetchRequestTemplateForName("allTiles")
     fetchedTiles = managedObjectContext.objc_send(:executeFetchRequest, request,
                                                   :error, nil)
-    annotated(fetchedTiles)
+    fetchedTiles
   end
 
   def swapTile_withTile(firstTile, secondTile)
@@ -152,20 +190,8 @@ class Puzzle < OSX::NSObject
                                    NSNumber.numberWithInt(yPosition), 'y',
                                    nil)
     request = @managedObjectModel.
-      objc_send(:fetchRequestFromTemplateWithName, 'tileAtXAndY',
+      objc_send(:fetchRequestFromTemplateWithName, @behavior.piece_position_request_template,
                  :substitutionVariables, substitutionVars)
-
-    executeTileFetch(request)
-  end
-
-  def correct_piece_at(xPosition, yPosition)
-    substitutionVars = NSDictionary.
-      dictionaryWithObjectsAndKeys(NSNumber.numberWithInt(xPosition), "x",
-                                   NSNumber.numberWithInt(yPosition), "y",
-                                   nil)
-    request = @managedObjectModel.
-      objc_send(:fetchRequestFromTemplateWithName, "tileAtCorrectXAndY",
-                :substitutionVariables, substitutionVars)
     executeTileFetch(request)
   end
 
@@ -177,17 +203,7 @@ class Puzzle < OSX::NSObject
       NSApplication.sharedApplication.presentError(fetchError)
       NSApplication.sharedApplication.terminate(self)
     end
-    annotated(fetchedTiles)[0]
-  end
-
-  def annotated(tiles)
-    tiles.each do | tile | 
-      def tile.position
-        BoardPosition.at(valueForKey("correctXPosition").to_i,
-                        valueForKey("correctYPosition").to_i)
-      end
-    end
-    tiles
+    fetchedTiles[0]
   end
 
   def blankTile
@@ -199,6 +215,18 @@ class Puzzle < OSX::NSObject
                                      :error, nil)
 
     fetchedTiles[0]
+  end
+
+  def correct_position_of(tile)
+    x = tile.valueForKey("correctXPosition").to_i
+    y = tile.valueForKey("correctYPosition").to_i
+    BoardPosition.at(x, y)
+  end
+
+  def display_position_of(tile)
+    x = tile.valueForKey(@behavior.x_position_to_display).to_i
+    y = tile.valueForKey(@behavior.y_position_to_display).to_i
+    BoardPosition.at(x, y)
   end
 
   def blank_tile_position
@@ -214,5 +242,17 @@ class Puzzle < OSX::NSObject
   def move_tile_at(tile_position)
     clickedTile = piece_at(tile_position.x, tile_position.y)
     swapTile_withTile(clickedTile, blankTile)
+  end
+
+  def configure_to_show_solution
+    @behavior = SolutionDisplayingBehavior.alloc.initWithPuzzle(self)
+  end
+
+  def configure_to_show_problem
+    @behavior = PuzzleSolvingBehavior.alloc.initWithPuzzle(self)
+  end
+
+  def click_tile(tile, error_block)
+    @behavior.click_tile(tile, error_block)
   end
 end

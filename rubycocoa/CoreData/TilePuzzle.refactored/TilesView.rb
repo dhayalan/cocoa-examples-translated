@@ -23,6 +23,7 @@ class TilesView < OSX::NSView
     def @puzzle_image.piece_rect(tile_position)
       origin = NSPoint.new(piece_size.width * tile_position.x,
                            piece_size.height * tile_position.y)
+      puts NSRect.new(origin, piece_size).inspect
       NSRect.new(origin, piece_size)
     end
 
@@ -39,33 +40,25 @@ class TilesView < OSX::NSView
 
   def draw_tile_in_rect(tile, rect)
     return if tile.entity.name == "BlankTile"
+    puts "To draw this tile:"
+    puts tile
+    puts "in this rect"
 
-#    loc =         BoardPosition.at(tile.valueForKey("correctXPosition").to_i,
-#                                   tile.valueForKey("correctYPosition").to_i)
-
-
-    @puzzle_image.objc_send(:compositeToPoint, tile_position_in_view_coordinates(tile, rect),
-                            :fromRect, @puzzle_image.piece_rect(tile.position),
+    @puzzle_image.objc_send(:compositeToPoint, tile_display_position_in_view_coordinates(tile, rect),
+                            :fromRect, @puzzle_image.piece_rect(@puzzle.correct_position_of(tile)),
                             :operation, NSCompositeCopy)
   end
 
+  def on_error(&block)
+    block
+  end
 
   def mouseDown(event)
-    # puts "mouseDown"
-    if delegate.valueForKey("isShowingSolution").boolValue 
-      delegate.objc_send(:setValue, NSNumber.numberWithBool(false),
-                         :forKey, "isShowingSolution")
-    else
-      locationInView = event.locationInWindow
-      locationInView = convertPoint_fromView(locationInView, nil)
-      clicked = convert_to_tile_position(locationInView)
+    locationInView = event.locationInWindow
+    locationInView = convertPoint_fromView(locationInView, nil)
+    clicked = convert_to_tile_position(locationInView)
 
-      if @puzzle.moveable_tile?(clicked)
-        @puzzle.move_tile_at(clicked)
-      else
-        OSX.NSBeep
-      end
-    end
+    @puzzle.click_tile(clicked, on_error { OSX.NSBeep })
 
     setNeedsDisplay(true)
   end
@@ -80,13 +73,15 @@ class TilesView < OSX::NSView
     BoardPosition.at(tileX, tileY)
   end
 
-  def tile_position_in_view_coordinates(tile, rect)
+  def tile_display_position_in_view_coordinates(tile, rect)
     tileSize = NSSize.new
     tileSize.height = rect.size.height / TileGridSize
     tileSize.width = rect.size.width / TileGridSize
 
-    tileX = tile.valueForKey('xPosition').to_i * tileSize.width
-    tileY = tile.valueForKey('yPosition').to_i * tileSize.height
+    tileX = @puzzle.display_position_of(tile).x * tileSize.width
+    tileY = @puzzle.display_position_of(tile).y * tileSize.height
+    puts "tile position in view coordinates: " +     NSPoint.new(rect.origin.x + tileX, rect.origin.y+tileY).inspect
+
     NSPoint.new(rect.origin.x + tileX, rect.origin.y+tileY)
   end
 

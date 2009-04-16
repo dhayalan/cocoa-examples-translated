@@ -5,14 +5,7 @@ class TilePuzzleAppDelegate < OSX::NSObject
   include OSX
 
   ib_outlet :window, :puzzle
-  kvc_accessor :isShowingSolution
   
-  def init
-    super_init
-    @isShowingSolution = false
-    self
-  end
-
   # This is misleading. It looks like an action called from UI,
   # but it's only called internally.
   def saveAction(sender)
@@ -62,12 +55,7 @@ class TilePuzzleAppDelegate < OSX::NSObject
   end
 
   def showSolution(sender)
-    @isShowingSolution = true
-    puts "=== @isShowingSolution: #{valueForKey('isShowingSolution').boolValue}"
-    
-    puts 'about to display'
+    @puzzle.configure_to_show_solution
     @window.display
-    puts 'done displaying'
   end
-
 end

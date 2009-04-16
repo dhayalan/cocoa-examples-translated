@@ -71,12 +71,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 261501950;
-			PBXWorkspaceStateSaveDate = 261501950;
+			PBXPerProjectTemplateStateSaveDate = 261581808;
+			PBXWorkspaceStateSaveDate = 261581808;
 		};
 		perUserProjectItems = {
-			7884251B0F9641F6004FC92B /* PBXBookmark */ = 7884251B0F9641F6004FC92B /* PBXBookmark */;
-			7884251E0F964201004FC92B /* XDModelBookmark */ = 7884251E0F964201004FC92B /* XDModelBookmark */;
+			7884251B0F9641F6004FC92B = 7884251B0F9641F6004FC92B /* PBXBookmark */;
+			788425A10F969387004FC92B = 788425A10F969387004FC92B /* XDModelBookmark */;
+			78B2AF4A0F976C0B00D2D6E9 /* XDModelBookmark */ = 78B2AF4A0F976C0B00D2D6E9 /* XDModelBookmark */;
 		};
 		sourceControlManager = 7837DD6B0F8D53FF00EDF6A8 /* Source Control */;
 		userBuildSettings = {
@@ -87,7 +88,7 @@
 			"Xdesign Model Editor Bookmark Key" = {
 				UIContextForDetailArea = {
 					_indexOfSelectedPane = 0;
-					_indexOfSelectedView = 0;
+					_indexOfSelectedView = 1;
 				};
 				UIContextForEntityArea = {
 					_indexOfSelectedView = 0;
@@ -282,14 +283,19 @@
 		isa = PBXBookmark;
 		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
 	};
-	7884251E0F964201004FC92B /* XDModelBookmark */ = {
+	788425A10F969387004FC92B /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+	};
+	78B2AF4A0F976C0B00D2D6E9 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
 		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
 		uiCtxt = {
 			UIContextForDetailArea = {
 				_indexOfSelectedPane = 0;
-				_indexOfSelectedView = 0;
+				_indexOfSelectedView = 1;
 			};
 			UIContextForEntityArea = {
 				_indexOfSelectedView = 0;

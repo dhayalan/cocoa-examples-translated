@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>7884251E0F964201004FC92B</string>
+						<string>78B2AF4A0F976C0B00D2D6E9</string>
 						<key>history</key>
 						<array>
-							<string>7884251B0F9641F6004FC92B</string>
+							<string>788425A10F969387004FC92B</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -322,9 +322,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
-									<integer>1</integer>
-									<integer>0</integer>
+									<integer>27</integer>
+									<integer>26</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -428,9 +427,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>788425030F963402004FC92B</string>
+				<string>78B2AF480F976C0B00D2D6E9</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>788425040F963402004FC92B</string>
+				<string>78B2AF490F976C0B00D2D6E9</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -566,9 +565,9 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>78BD9D050F8E97810031A3E7</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>/Users/marick/src/publish/cocoa-examples-translated/rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj</string>
 		<string>7884251C0F964201004FC92B</string>
+		<string>/Users/marick/src/publish/cocoa-examples-translated/rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>558 471 690 397 0 0 1440 878 </string>
@@ -648,7 +647,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>78BD9D050F8E97810031A3E7</string>
-				<string>7884251F0F964201004FC92B</string>
+				<string>78B2AF4B0F976C0B00D2D6E9</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -690,8 +689,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 201}}</string>
-											<string>{{316, 0}, {378, 201}}</string>
+											<string>{{0, 0}, {316, 202}}</string>
+											<string>{{316, 0}, {378, 202}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -706,8 +705,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 201}}</string>
-											<string>{{0, 201}, {694, 180}}</string>
+											<string>{{0, 0}, {694, 202}}</string>
+											<string>{{0, 202}, {694, 179}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -740,7 +739,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 201}}</string>
+									<string>{{316, 0}, {378, 202}}</string>
 									<key>RubberWindowFrame</key>
 									<string>419 303 694 422 0 0 1440 878 </string>
 								</dict>
@@ -768,13 +767,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>788425200F964201004FC92B</string>
+				<string>78B2AF4C0F976C0B00D2D6E9</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>788425210F964201004FC92B</string>
-				<string>788425220F964201004FC92B</string>
-				<string>788425230F964201004FC92B</string>
-				<string>788425240F964201004FC92B</string>
-				<string>788425250F964201004FC92B</string>
+				<string>78B2AF4D0F976C0B00D2D6E9</string>
+				<string>78B2AF4E0F976C0B00D2D6E9</string>
+				<string>78B2AF4F0F976C0B00D2D6E9</string>
+				<string>78B2AF500F976C0B00D2D6E9</string>
+				<string>78B2AF510F976C0B00D2D6E9</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -938,7 +937,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>788425260F964201004FC92B</string>
+				<string>78B2AF520F976C0B00D2D6E9</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
