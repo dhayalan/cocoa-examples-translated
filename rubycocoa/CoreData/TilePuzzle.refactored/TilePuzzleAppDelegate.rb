@@ -6,22 +6,13 @@ class TilePuzzleAppDelegate < OSX::NSObject
 
   ib_outlet :window, :puzzle, :view
   
-  # This is misleading. It looks like an action called from UI,
-  # but it's only called internally.
-  def saveAction(sender)
-    puts "In save action"
-    retval, error = @puzzle.managedObjectContext.save_
-    if retval == 0
-      NSApplication.sharedApplication.presentError(error)
-    end
-  end
-
   def windowWillReturnUndoManager(sender)
-    @puzzle.managedObjectContext.undoManager
+    puts "returning undo manager"
+    @puzzle.undo_manager
   end
 
   def windowWillClose(notification)
-    saveAction(self)
+    @puzzle.save
   end
 
   def applicationShouldTerminateAfterLastWindowClosed
@@ -29,25 +20,11 @@ class TilePuzzleAppDelegate < OSX::NSObject
   end
 
   def applicationShouldTerminate(sender)
-    reply = NSTerminateNow
-    return reply unless @puzzle.managedObjectContext  # This should be impossible.
-    if @puzzle.managedObjectContext.commitEditing
-      result, error = @puzzle.managedObjectContext.save_  # _ required because name of method is "save:"
-      unless result
-        errorResult = NSApplication.sharedApplication.presentError(error)
-        if errorResult
-          reply = NSTerminateCancel
-        else
-          alertReturn = NSRunAlertPanel(nil, "Could not save changes while quitting. Quit anyway?", "Quit anyway", "Cancel", nil)
-          reply = NSTerminateCancel if alertReturn == NSAlertAlternateReturn
-        end
-      end
-    else
-      reply = NSTerminateCancel
-    end
-    reply
+    return NSTerminateNow unless @puzzle # Died in initialization.
+    @puzzle.finish_pending_user_edits
+    @puzzle.save
+    NSTerminateNow
   end
-
 
   def shuffle(sender)
     @puzzle.shuffle
