@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>78B2AF4A0F976C0B00D2D6E9</string>
+						<string>78B2B03B0F99031400D2D6E9</string>
 						<key>history</key>
 						<array>
 							<string>788425A10F969387004FC92B</string>
@@ -272,8 +272,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -322,8 +320,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>27</integer>
-									<integer>26</integer>
+									<integer>3</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -391,6 +389,8 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -563,10 +563,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>78B2B03C0F99031400D2D6E9</string>
+		<string>78B2B03D0F99031400D2D6E9</string>
+		<string>78B2B03E0F99031400D2D6E9</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>78BD9D050F8E97810031A3E7</string>
-		<string>7884251C0F964201004FC92B</string>
 		<string>/Users/marick/src/publish/cocoa-examples-translated/rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj</string>
+		<string>7884251C0F964201004FC92B</string>
 		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>

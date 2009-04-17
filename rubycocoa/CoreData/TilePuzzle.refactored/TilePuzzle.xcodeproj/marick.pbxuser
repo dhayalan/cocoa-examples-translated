@@ -75,9 +75,8 @@
 			PBXWorkspaceStateSaveDate = 261581808;
 		};
 		perUserProjectItems = {
-			7884251B0F9641F6004FC92B = 7884251B0F9641F6004FC92B /* PBXBookmark */;
-			788425A10F969387004FC92B = 788425A10F969387004FC92B /* XDModelBookmark */;
-			78B2AF4A0F976C0B00D2D6E9 /* XDModelBookmark */ = 78B2AF4A0F976C0B00D2D6E9 /* XDModelBookmark */;
+			788425A10F969387004FC92B /* XDModelBookmark */ = 788425A10F969387004FC92B /* XDModelBookmark */;
+			78B2B03B0F99031400D2D6E9 /* XDModelBookmark */ = 78B2B03B0F99031400D2D6E9 /* XDModelBookmark */;
 		};
 		sourceControlManager = 7837DD6B0F8D53FF00EDF6A8 /* Source Control */;
 		userBuildSettings = {
@@ -88,7 +87,7 @@
 			"Xdesign Model Editor Bookmark Key" = {
 				UIContextForDetailArea = {
 					_indexOfSelectedPane = 0;
-					_indexOfSelectedView = 1;
+					_indexOfSelectedView = 0;
 				};
 				UIContextForEntityArea = {
 					_indexOfSelectedView = 0;
@@ -130,7 +129,7 @@
 						isCollapsed = yes;
 						sizes = (
 							"{{0, 0}, {888, 220}}",
-							"{{0, 225}, {888, 517}}",
+							"{{0, 225}, {888, 540}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -145,7 +144,7 @@
 					};
 				};
 				UIContextForPropertyArea = {
-					_indexOfSelectedView = 0;
+					_indexOfSelectedView = 4;
 					chosenTableColumnnFRTs = (
 						"FT Fetch Request",
 						"FT Predicate",
@@ -237,7 +236,7 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{-113, -35}, {873, 502}}";
+				"xdesign model diagram view visible rect key" = "{{-113, -47}, {873, 525}}";
 			};
 			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
@@ -279,23 +278,19 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	7884251B0F9641F6004FC92B /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-	};
 	788425A10F969387004FC92B /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
 		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
 	};
-	78B2AF4A0F976C0B00D2D6E9 /* XDModelBookmark */ = {
+	78B2B03B0F99031400D2D6E9 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
 		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
 		uiCtxt = {
 			UIContextForDetailArea = {
 				_indexOfSelectedPane = 0;
-				_indexOfSelectedView = 1;
+				_indexOfSelectedView = 0;
 			};
 			UIContextForEntityArea = {
 				_indexOfSelectedView = 0;
@@ -337,7 +332,7 @@
 					isCollapsed = yes;
 					sizes = (
 						"{{0, 0}, {888, 220}}",
-						"{{0, 225}, {888, 517}}",
+						"{{0, 225}, {888, 540}}",
 					);
 				};
 				tableSplitGeometry = {
@@ -352,7 +347,7 @@
 				};
 			};
 			UIContextForPropertyArea = {
-				_indexOfSelectedView = 0;
+				_indexOfSelectedView = 4;
 				chosenTableColumnnFRTs = (
 					"FT Fetch Request",
 					"FT Predicate",
@@ -444,10 +439,12 @@
 				);
 			};
 			"xdesign model browser state key - shown/hidden" = 1;
-			"xdesign model diagram view visible rect key" = "{{-113, -35}, {873, 502}}";
+			"xdesign model diagram view visible rect key" = "{{-113, -47}, {873, 525}}";
 			"xdesign model selected entities key" = (
+				"<XDPMEntity: 0x2a53c50>{name=Tile, package=}",
 			);
 			"xdesign model selected properties key" = (
+				"<XDPMFetchRequest: 0x2a5eef0>",
 			);
 		};
 	};
