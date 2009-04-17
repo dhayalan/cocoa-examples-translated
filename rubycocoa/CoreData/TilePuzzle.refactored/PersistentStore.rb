@@ -40,17 +40,17 @@ class PersistentStore < OSX::NSObject
     request = managedObjectModel.
       objc_send(:fetchRequestFromTemplateWithName, name,
                  :substitutionVariables, hash)
-    executeTileFetch(request)
+    execute_fetch(request)
   end
 
   def fetch_by_name(name)
     request = NSFetchRequest.alloc.init
     entity = managedObjectModel.entitiesByName.objectForKey(name)
     request.entity=entity
-    executeTileFetch(request)
+    execute_fetch(request)
   end
 
-  def executeTileFetch(request)
+  def execute_fetch(request)
     fetchedTiles, fetchError = managedObjectContext.objc_send(:executeFetchRequest, request,
                                                  :error)
     if fetchedTiles == nil

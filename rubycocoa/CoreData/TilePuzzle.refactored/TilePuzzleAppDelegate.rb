@@ -7,7 +7,6 @@ class TilePuzzleAppDelegate < OSX::NSObject
   ib_outlet :window, :puzzle, :view
   
   def windowWillReturnUndoManager(sender)
-    puts "returning undo manager"
     @puzzle.undo_manager
   end
 
@@ -36,3 +35,4 @@ class TilePuzzleAppDelegate < OSX::NSObject
     @window.display
   end
 end
+

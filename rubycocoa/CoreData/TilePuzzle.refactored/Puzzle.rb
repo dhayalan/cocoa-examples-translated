@@ -79,16 +79,14 @@ class Puzzle < OSX::NSObject
 
 
   def swap(first, second)
-    first_x = first.valueForKey("xPosition")
-    first_y = first.valueForKey("yPosition")
+    first_x = first.xPosition
+    first_y = first.yPosition
 
     @persistent_store.undoably do 
-      first.setValue_forKey(second.valueForKey("xPosition"),
-                                "xPosition")
-      first.setValue_forKey(second.valueForKey("yPosition"),
-                                "yPosition")
-      second.setValue_forKey(first_x, "xPosition")
-      second.setValue_forKey(first_y, "yPosition")
+      first.xPosition = second.xPosition
+      first.yPosition = second.yPosition
+      second.xPosition = first_x
+      second.yPosition = first_y
     end
   end
 
