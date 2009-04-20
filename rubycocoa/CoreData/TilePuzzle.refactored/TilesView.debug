@@ -3,23 +3,6 @@ require 'util'
 require 'BoardPosition'
 
 class TilesView < OSX::NSView
-  include OSX
-  include Utilities
-
-  ib_outlet :puzzle
-
-  # View protocol
-
-  def awakeFromNib
-    NSNotificationCenter.defaultCenter.objc_send(:addObserver, self,
-                                                 :selector, 'didUndo:',
-                                                 :name, nil,
-                                                 :object, @puzzle.undo_manager)
-
-    @puzzle_image = find_puzzle_image
-    user_wants_to_solve_puzzle
-  end
-
   def drawRect(rect)
     NSColor.whiteColor.set
     NSBezierPath.fillRect(rect)
@@ -29,6 +12,18 @@ class TilesView < OSX::NSView
     $all.each do | tile |
       draw_tile_in_rect(tile, rect)
     end
+  end
+
+  def draw_tile_in_rect(tile, rect)
+    print_tile(tile)
+    return if tile.blank?
+
+    to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
+    from = @puzzle_image.tile_rect(tile.ending_position)
+
+    @puzzle_image.objc_send(:compositeToPoint, to,
+                            :fromRect, from,
+                            :operation, NSCompositeCopy)
   end
 
   def elementary(e)
@@ -49,6 +44,30 @@ class TilesView < OSX::NSView
     end
   end
  
+
+
+
+
+
+  # The following bits aren't relevant to the point of this example.
+
+  include OSX
+  include Utilities
+
+  ib_outlet :puzzle
+
+  # View protocol
+
+  def awakeFromNib
+    NSNotificationCenter.defaultCenter.objc_send(:addObserver, self,
+                                                 :selector, 'didUndo:',
+                                                 :name, nil,
+                                                 :object, @puzzle.undo_manager)
+
+    @puzzle_image = find_puzzle_image
+    user_wants_to_solve_puzzle
+  end
+
   def mouseDown(event)
     send(@click_behavior, tile_position_clicked(event))
     setNeedsDisplay(true)

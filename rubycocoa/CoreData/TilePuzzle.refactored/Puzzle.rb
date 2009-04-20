@@ -17,6 +17,23 @@ class Puzzle < OSX::NSObject
     annotated(@persistent_store.fetch_by_template("allTiles"))
   end
 
+  def annotated(tiles)
+    tiles.each do | tile |
+      def tile.blank?
+        entity.name == "BlankTile"
+      end
+
+      def tile.ending_position
+        BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
+      end
+
+      def tile.current_position
+        BoardPosition.for_tile(self, "xPosition", "yPosition")
+      end
+    end
+    tiles
+  end
+
   def shuffle
     fetched = all_tiles
     
@@ -103,25 +120,6 @@ class Puzzle < OSX::NSObject
     annotated(result)[0]
   end
 
-  def annotated(tiles)
-
-    tiles.each do | tile |
-
-      def tile.blank?
-        entity.name == "BlankTile"
-      end
-      
-
-      def tile.ending_position
-        BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
-      end
-
-      def tile.current_position
-        BoardPosition.for_tile(self, "xPosition", "yPosition")
-      end
-    end
-    tiles
-  end
 
   def moveable_tile?(tile_position)
     tile_position.adjacent_to(the_blank_tile.current_position)

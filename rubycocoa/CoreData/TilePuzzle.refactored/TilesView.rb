@@ -3,6 +3,34 @@ require 'util'
 require 'BoardPosition'
 
 class TilesView < OSX::NSView
+  def drawRect(rect)
+    NSColor.whiteColor.set
+    NSBezierPath.fillRect(rect)
+    
+    @puzzle.all_tiles.each do | tile |
+      draw_tile_in_rect(tile, rect)
+    end
+  end
+
+  def draw_tile_in_rect(tile, rect)
+    return if tile.blank?
+
+    to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
+    from = @puzzle_image.tile_rect(tile.ending_position)
+
+    @puzzle_image.objc_send(:compositeToPoint, to,
+                            :fromRect, from,
+                            :operation, NSCompositeCopy)
+  end
+
+
+
+
+
+
+
+  # THE FOLLOWING BITS AREN'T RELEVANT TO THIS EXAMPLE
+
   include OSX
   include Utilities
 
@@ -18,15 +46,6 @@ class TilesView < OSX::NSView
 
     @puzzle_image = find_puzzle_image
     user_wants_to_solve_puzzle
-  end
-
-  def drawRect(rect)
-    NSColor.whiteColor.set
-    NSBezierPath.fillRect(rect)
-    
-    @puzzle.all_tiles.each do | tile |
-      draw_tile_in_rect(tile, rect)
-    end
   end
 
   def mouseDown(event)
@@ -58,17 +77,6 @@ class TilesView < OSX::NSView
 
   def move_tile(tile_position)
     @puzzle.move_tile(tile_position, on_error { OSX.NSBeep })
-  end
-
-  def draw_tile_in_rect(tile, rect)
-    return if tile.blank?
-
-    to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
-    from = @puzzle_image.tile_rect(tile.ending_position)
-
-    @puzzle_image.objc_send(:compositeToPoint, to,
-                            :fromRect, from,
-                            :operation, NSCompositeCopy)
   end
 
   def tile_position_clicked(event)
