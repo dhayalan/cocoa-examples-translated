@@ -110,7 +110,6 @@ class Puzzle < OSX::NSObject
       def tile.blank?
         entity.name == "BlankTile"
       end
-      
 
       def tile.ending_position
         BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")

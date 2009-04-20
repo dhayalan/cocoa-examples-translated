@@ -1,3 +1,5 @@
+require 'util'
+
 class PersistentStore < OSX::NSObject
   include OSX
   
@@ -46,18 +48,13 @@ class PersistentStore < OSX::NSObject
   def fetch_by_name(name)
     request = NSFetchRequest.alloc.init
     entity = managedObjectModel.entitiesByName.objectForKey(name)
-    request.entity=entity
+    request.entity = entity
     execute_fetch(request)
   end
 
   def execute_fetch(request)
-    fetchedTiles, fetchError = managedObjectContext.objc_send(:executeFetchRequest, request,
-                                                 :error)
-    if fetchedTiles == nil
-      NSApplication.sharedApplication.presentError(fetchError)
-      NSApplication.sharedApplication.terminate(self)
-    end
-    fetchedTiles
+    managedObjectContext.objc_send(:executeFetchRequest, request,
+                                   :error, nil)
   end
 
   def insert_by_name(name, settings = {})
