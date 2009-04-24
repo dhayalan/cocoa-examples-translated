@@ -6,13 +6,6 @@ require 'PersistentStore'
 class Puzzle < OSX::NSObject
   include OSX
 
-  def init
-    super_init
-    @persistent_store = PersistentStore.alloc.init
-    create_all_tiles if @persistent_store.fresh?
-    self
-  end
-
   def all_tiles
     annotated(@persistent_store.fetch_by_template("allTiles"))
   end
@@ -32,6 +25,19 @@ class Puzzle < OSX::NSObject
       end
     end
     tiles
+  end
+
+
+
+
+
+  # Not relevant to bug description
+
+  def init
+    super_init
+    @persistent_store = PersistentStore.alloc.init
+    create_all_tiles if @persistent_store.fresh?
+    self
   end
 
   def shuffle

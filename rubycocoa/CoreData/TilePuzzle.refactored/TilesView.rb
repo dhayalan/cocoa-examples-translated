@@ -7,12 +7,15 @@ class TilesView < OSX::NSView
     NSColor.whiteColor.set
     NSBezierPath.fillRect(rect)
     
-    @puzzle.all_tiles.each do | tile |
+    $all = @puzzle.all_tiles
+    print_array
+    $all.each do | tile |
       draw_tile_in_rect(tile, rect)
     end
   end
 
   def draw_tile_in_rect(tile, rect)
+    print_tile(tile)
     return if tile.blank?
 
     to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
@@ -23,13 +26,30 @@ class TilesView < OSX::NSView
                             :operation, NSCompositeCopy)
   end
 
+  def elementary(e)
+    "#{[e.xPosition.to_i, e.yPosition.to_i].inspect}: #{e.object_id}/#{e.__ocid__} #{e.respond_to?(:blank?)}"
+  end
+
+  def print_array
+    puts "NSArray at #{$all.__ocid__}"
+    puts $all.collect { | e | elementary(e) }
+  end
+
+  def print_tile(tile)
+    puts "Drawing #{elementary(tile)}"
+    puts tile
+    unless tile.respond_to?(:blank?)
+      puts "ABOUT TO DIE"
+      print_array
+    end
+  end
+ 
 
 
 
 
 
-
-  # THE FOLLOWING BITS AREN'T RELEVANT TO THIS EXAMPLE
+  # The following bits aren't relevant to the point of this example.
 
   include OSX
   include Utilities
@@ -78,6 +98,7 @@ class TilesView < OSX::NSView
   def move_tile(tile_position)
     @puzzle.move_tile(tile_position, on_error { OSX.NSBeep })
   end
+
 
   def tile_position_clicked(event)
     locationInView = event.locationInWindow
