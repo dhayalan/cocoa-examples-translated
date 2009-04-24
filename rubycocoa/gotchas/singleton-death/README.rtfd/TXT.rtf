@@ -1,0 +1,99 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf430
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier-Bold;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid0\'02\'05.;}{\levelnumbers\'01;}}{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid0\'02\'05.;}{\levelnumbers\'01;}}{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11860\viewh15560\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 This directory demonstrates an issue when repeatedly extracting an Objective-C object from an NSArray. In this case, the first extraction adds a singleton method to the extracted object\'96or, more precisely, to its Ruby proxy (the Ruby object that forwards messages onto Objective-C if needed). \
+\
+However, on later extractions, the Objective-C object may be "paired" with a different Ruby proxy. Why would that proxy have the right singleton method?\
+\
+As it turns out, it often does - presumably there's caching involved. \
+\
+To reproduce the issue:\
+\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\ql\qnatural\pardirnatural
+\ls1\ilvl0\cf0 1. Build the app in XCode. You'll see something like this:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+	{{\NeXTGraphic Pasted Graphic.tiff \width8000 \height8440
+}¬}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 You should also see this in the Debugger console:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+\pard\tx240\tx480\tx720\tx960\tx1200\tx1440\tx1680\tx1920\tx2160\tx2400\tx2640\tx2880\tx3120\tx3360\tx3600\tx3840\tx4080\tx4320\tx4560\tx4800\tx5040\tx5280\tx5520\tx5760\tx6000\tx6240\tx6480\tx6720\tx6960\tx7200\tx7440\tx7680\tx7920\tx8160\tx8400\tx8640\tx8880\tx9120\tx9360\tx9600\tx9840\tx10080\tx10320\tx10560\tx10800\tx11040\tx11280\tx11520\tx11760\tx12000\tx12240\tx12480\tx12720\tx12960\tx13200\tx13440\tx13680\tx13920\tx14160\tx14400\tx14640\tx14880\tx15120\tx15360\tx15600\tx15840\tx16080\tx16320\tx16560\tx16800\tx17040\tx17280\tx17520\tx17760\tx18000\tx18240\tx18480\tx18720\tx18960\tx19200\tx19440\tx19680\tx19920\tx20160\tx20400\tx20640\tx20880\tx21120\tx21360\tx21600\tx21840\tx22080\tx22320\tx22560\tx22800\tx23040\tx23280\tx23520\tx23760\tx24000\ql\qnatural\pardirnatural
+
+\f1\b \cf0 \CocoaLigature0 NSArray at 385678576\
+[2, 0]: 2830200/7154224 true\
+[2, 3]: 2830430/7154432 true\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b0 \cf0 \CocoaLigature1 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\ql\qnatural\pardirnatural
+\ls2\ilvl0\cf0 {\listtext	\'95	}The parts of a line are, in order:\
+{\listtext	\'95	}The current [x, y] position of the tile in the puzzle.\
+{\listtext	\'95	}The Ruby proxy's object_id (which is basically a memory address)\
+{\listtext	\'95	}The Objective C's __ocid__ (also a memory address).\
+{\listtext	\'95	}Whether the object responds_to? :blank?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+There's also a more detailed description of each tile:\
+\
+\pard\tx240\tx480\tx720\tx960\tx1200\tx1440\tx1680\tx1920\tx2160\tx2400\tx2640\tx2880\tx3120\tx3360\tx3600\tx3840\tx4080\tx4320\tx4560\tx4800\tx5040\tx5280\tx5520\tx5760\tx6000\tx6240\tx6480\tx6720\tx6960\tx7200\tx7440\tx7680\tx7920\tx8160\tx8400\tx8640\tx8880\tx9120\tx9360\tx9600\tx9840\tx10080\tx10320\tx10560\tx10800\tx11040\tx11280\tx11520\tx11760\tx12000\tx12240\tx12480\tx12720\tx12960\tx13200\tx13440\tx13680\tx13920\tx14160\tx14400\tx14640\tx14880\tx15120\tx15360\tx15600\tx15840\tx16080\tx16320\tx16560\tx16800\tx17040\tx17280\tx17520\tx17760\tx18000\tx18240\tx18480\tx18720\tx18960\tx19200\tx19440\tx19680\tx19920\tx20160\tx20400\tx20640\tx20880\tx21120\tx21360\tx21600\tx21840\tx22080\tx22320\tx22560\tx22800\tx23040\tx23280\tx23520\tx23760\tx24000\ql\qnatural\pardirnatural
+
+\f1\b \cf0 \CocoaLigature0 Drawing [3, 1]: 2828570/7155504 true\
+<NSManagedObject: 0x6d2f30> (entity: ImageTile; id: 0x69d8a0 <x-coredata://33F01039-8668-4830-8160-15095C279399/ImageTile/p106> ; data: \{\
+    correctXPosition = 2;\
+    correctYPosition = 1;\
+    xPosition = 3;\
+    yPosition = 1;\
+\})\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b0 \cf0 \CocoaLigature1 \
+The first line has the information you've already seen. The rest shows that the Objective-C object is a Core Data NSManagedObject that contains four attributes.\
+\
+\
+2. Now click madly in the puzzle. Eventually the puzzle will crash, with a stack trace in the debugger console that's complaining about an unimplemented Objective-C method 
+\f2 isBlank
+\f0  (the conventional Objective-C translation of 
+\f2 blank?
+\f0 ) \
+\
+Above it, you'll see something like this:\
+\
+\pard\tx240\tx480\tx720\tx960\tx1200\tx1440\tx1680\tx1920\tx2160\tx2400\tx2640\tx2880\tx3120\tx3360\tx3600\tx3840\tx4080\tx4320\tx4560\tx4800\tx5040\tx5280\tx5520\tx5760\tx6000\tx6240\tx6480\tx6720\tx6960\tx7200\tx7440\tx7680\tx7920\tx8160\tx8400\tx8640\tx8880\tx9120\tx9360\tx9600\tx9840\tx10080\tx10320\tx10560\tx10800\tx11040\tx11280\tx11520\tx11760\tx12000\tx12240\tx12480\tx12720\tx12960\tx13200\tx13440\tx13680\tx13920\tx14160\tx14400\tx14640\tx14880\tx15120\tx15360\tx15600\tx15840\tx16080\tx16320\tx16560\tx16800\tx17040\tx17280\tx17520\tx17760\tx18000\tx18240\tx18480\tx18720\tx18960\tx19200\tx19440\tx19680\tx19920\tx20160\tx20400\tx20640\tx20880\tx21120\tx21360\tx21600\tx21840\tx22080\tx22320\tx22560\tx22800\tx23040\tx23280\tx23520\tx23760\tx24000\ql\qnatural\pardirnatural
+
+\f1\b \cf0 \CocoaLigature0 Drawing [0, 2]: 3004970/7154752 false\
+<NSManagedObject: 0x6d2c40> (entity: ImageTile; id: 0x69e000 <x-coredata://33F01039-8668-4830-8160-15095C279399/ImageTile/p107> ; data: \{\
+    correctXPosition = 0;\
+    correctYPosition = 2;\
+    xPosition = 0;\
+    yPosition = 2;\
+\})\
+ABOUT TO DIE\
+NSArray at 370865648\
+[3, 1]: 3001640/7155664 false\
+[0, 3]: 2828850/7155728 true\
+[3, 3]: 3001360/7155968 false\
+[1, 3]: 3004220/7156032 true\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b0 \cf0 \CocoaLigature1 \
+Notice that the object sometimes does and sometimes does not respond to 
+\f2 blank?
+\f0 . If you compare the object at a particular position to the version before the "about to die" method, you'll see:\
+\
+\pard\tx240\tx480\tx720\tx960\tx1200\tx1440\tx1680\tx1920\tx2160\tx2400\tx2640\tx2880\tx3120\tx3360\tx3600\tx3840\tx4080\tx4320\tx4560\tx4800\tx5040\tx5280\tx5520\tx5760\tx6000\tx6240\tx6480\tx6720\tx6960\tx7200\tx7440\tx7680\tx7920\tx8160\tx8400\tx8640\tx8880\tx9120\tx9360\tx9600\tx9840\tx10080\tx10320\tx10560\tx10800\tx11040\tx11280\tx11520\tx11760\tx12000\tx12240\tx12480\tx12720\tx12960\tx13200\tx13440\tx13680\tx13920\tx14160\tx14400\tx14640\tx14880\tx15120\tx15360\tx15600\tx15840\tx16080\tx16320\tx16560\tx16800\tx17040\tx17280\tx17520\tx17760\tx18000\tx18240\tx18480\tx18720\tx18960\tx19200\tx19440\tx19680\tx19920\tx20160\tx20400\tx20640\tx20880\tx21120\tx21360\tx21600\tx21840\tx22080\tx22320\tx22560\tx22800\tx23040\tx23280\tx23520\tx23760\tx24000\ql\qnatural\pardirnatural
+
+\f1\b \cf0 \CocoaLigature0 [3, 1]: 3004490/7155664 true\
+\
+The Ruby object_id has changed. \
+\
+Look inside TileView.rb for explanations of where the failure comes from.}

@@ -7,10 +7,17 @@ class Puzzle < OSX::NSObject
   include OSX
 
   def all_tiles
+    # This fetches an NSArray full of Objective-C objects.
+    # Then it annotates it... read on.
     annotated(@persistent_store.fetch_by_template("allTiles"))
   end
 
   def annotated(tiles)
+    # Each Objective-C object is extracted (paired with a Ruby proxy) 
+    # and three singleton methods are attached to that object.
+    # Note that the Ruby proxy object can be discarded after 
+    # its annotated - there are no Ruby pointers to it.
+    # Now return to TilesView.rb
     tiles.each do | tile |
       def tile.blank?
         entity.name == "BlankTile"

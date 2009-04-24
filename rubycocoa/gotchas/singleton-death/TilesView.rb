@@ -3,12 +3,16 @@ require 'util'
 require 'BoardPosition'
 
 class TilesView < OSX::NSView
-  def drawRect(rect)
+  def drawRect(rect)                  # This will be called when you click.
     NSColor.whiteColor.set
     NSBezierPath.fillRect(rect)
     
-    $all = @puzzle.all_tiles
+    $all = @puzzle.all_tiles          # Look at this in Puzzle.rb
     print_array
+
+    # Each is going to extract each Objective-C object in turn, 
+    # giving it a new (potentially) Ruby proxy. Often, but not 
+    # always, that proxy will be the same one as before.
     $all.each do | tile |
       draw_tile_in_rect(tile, rect)
     end
