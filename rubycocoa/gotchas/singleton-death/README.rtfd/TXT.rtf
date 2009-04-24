@@ -8,7 +8,9 @@
 \margl1440\margr1440\vieww11860\viewh15560\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
 
-\f0\fs24 \cf0 This directory demonstrates an issue when repeatedly extracting an Objective-C object from an NSArray. In this case, the first extraction adds a singleton method to the extracted object\'96or, more precisely, to its Ruby proxy (the Ruby object that forwards messages onto Objective-C if needed). \
+\f0\fs24 \cf0 You may want to look at ../object-id-simple before looking here.\
+\
+This directory demonstrates an issue when repeatedly extracting an Objective-C object from an NSArray. In this case, the first extraction adds a singleton method to the extracted object\'96or, more precisely, to its Ruby proxy (the Ruby object that forwards messages onto Objective-C if needed). \
 \
 However, on later extractions, the Objective-C object may be "paired" with a different Ruby proxy. Why would that proxy have the right singleton method?\
 \
