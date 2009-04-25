@@ -6,38 +6,15 @@ require 'PersistentStore'
 class Puzzle < OSX::NSObject
   include OSX
 
-  def all_tiles
-    annotated(@persistent_store.fetch_by_template("allTiles"))
-  end
-
-  def annotated(tiles)
-    tiles.each do | tile |
-      def tile.blank?
-        entity.name == "BlankTile"
-      end
-
-      def tile.ending_position
-        BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
-      end
-
-      def tile.current_position
-        BoardPosition.for_tile(self, "xPosition", "yPosition")
-      end
-    end
-    tiles
-  end
-
-
-
-
-
-  # Not relevant to bug description
-
   def init
     super_init
     @persistent_store = PersistentStore.alloc.init
     create_all_tiles if @persistent_store.fresh?
     self
+  end
+
+  def all_tiles
+    annotated(@persistent_store.fetch_by_template("allTiles"))
   end
 
   def shuffle
@@ -71,6 +48,23 @@ class Puzzle < OSX::NSObject
   end
 
   private
+
+  def annotated(tiles)
+    tiles.each do | tile |
+      def tile.blank?
+        entity.name == "BlankTile"
+      end
+
+      def tile.ending_position
+        BoardPosition.for_tile(self, "correctXPosition", "correctYPosition")
+      end
+
+      def tile.current_position
+        BoardPosition.for_tile(self, "xPosition", "yPosition")
+      end
+    end
+    tiles
+  end
 
   def create_all_tiles
     place_image_tiles_sequentially
