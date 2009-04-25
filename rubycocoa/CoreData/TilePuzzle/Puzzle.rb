@@ -63,7 +63,17 @@ class Puzzle < OSX::NSObject
         BoardPosition.for_tile(self, "xPosition", "yPosition")
       end
     end
-    tiles
+    link_duration_of_contents_to_duration_of_container(tiles)
+  end
+
+  def link_duration_of_contents_to_duration_of_container(tiles)
+    # Objective-C objects within an Objective-C container can lose their
+    # Ruby half, allowing their object_id to change each time they're
+    # fetched into the Ruby universe. By putting them inside a Ruby
+    # container, that fate is avoided.
+    # See rubycocoa/gotchas/object-id-simple.
+    puts "This doesn't actually work."
+    tiles.to_a
   end
 
   def create_all_tiles
