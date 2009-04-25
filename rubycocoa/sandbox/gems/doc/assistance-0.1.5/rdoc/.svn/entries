@@ -1,0 +1,106 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/rdoc
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+fr_file_index.html
+file
+
+
+
+
+2009-03-30T22:57:00.000000Z
+cfb22c73e3f34df11e36590640794092
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+fr_method_index.html
+file
+
+
+
+
+2009-03-30T22:57:00.000000Z
+edc5b372cda6ac7c3151d5c02ffb42dd
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+files
+dir
+
+created.rid
+file
+
+
+
+
+2009-03-30T22:57:00.000000Z
+5816de2d9975c5d2ef054e08d744cad8
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+fr_class_index.html
+file
+
+
+
+
+2009-03-30T22:57:00.000000Z
+6d4f68d5919eea07e77a8d5b554d2f60
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+index.html
+file
+
+
+
+
+2009-03-30T22:57:00.000000Z
+e689c5fd47ae9f729c7738fccf48a16f
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+rdoc-style.css
+file
+
+
+
+
+2009-03-30T22:57:00.000000Z
+07cc32aa3b88f9911fe43613a29650a3
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+classes
+dir
+

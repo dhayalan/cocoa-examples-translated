@@ -1,0 +1,103 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/ruby2ruby-1.1.8/rdoc/classes
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+UnboundMethod.src
+dir
+
+Method.html
+file
+
+
+
+
+2009-03-30T22:56:55.000000Z
+e43c36da555f6e4228bea81e57335c81
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+ProcStoreTmp.html
+file
+
+
+
+
+2009-03-30T22:56:55.000000Z
+baf7a9f7c0277f7d370655602fba2304
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Method.src
+dir
+
+Proc.html
+file
+
+
+
+
+2009-03-30T22:56:55.000000Z
+d29778e9e189283dbca9c96fdae629d9
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+ProcStoreTmp.src
+dir
+
+Ruby2Ruby.html
+file
+
+
+
+
+2009-03-30T22:56:55.000000Z
+32a0b1c0e308a8b1bb6e6c76244359d7
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Proc.src
+dir
+
+Ruby2Ruby.src
+dir
+
+UnboundMethod.html
+file
+
+
+
+
+2009-03-30T22:56:55.000000Z
+fd7bff98c0528fcc1e65aa556ad83d4b
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+

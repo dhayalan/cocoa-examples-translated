@@ -1,0 +1,58 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/rdoc/files
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+README.html
+file
+
+
+
+
+2009-03-30T22:56:57.000000Z
+8e18c568c2be498408a2112ea50432ce
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+
+doc
+dir
+
+lib
+dir
+
+CHANGES.html
+file
+
+
+
+
+2009-03-30T22:56:57.000000Z
+e4aa7d01a7b74e65321eb956003e6bf7
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+

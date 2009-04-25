@@ -1,0 +1,79 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+FalseClass
+dir
+
+Numeric
+dir
+
+created.rid
+file
+
+
+
+
+2009-03-30T22:57:01.000000Z
+da24a075902b5f2b318b81686d170009
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Inflector
+dir
+
+TrueClass
+dir
+
+Object
+dir
+
+String
+dir
+
+NilClass
+dir
+
+ConnectionPool
+dir
+
+Validation
+dir
+
+SingleThreadedPool
+dir
+
+Assistance
+dir
+
+Inflections
+dir
+
+Array
+dir
+

@@ -1,0 +1,70 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/ParseTree-2.1.1/rdoc/files
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+test
+dir
+
+README_txt.html
+file
+
+
+
+
+2009-03-30T22:56:50.000000Z
+f65230648f68a6a06d04c9c7ecd43101
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+History_txt.html
+file
+
+
+
+
+2009-03-30T22:56:50.000000Z
+3162901715829186060f331231843b28
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+lib
+dir
+
+Manifest_txt.html
+file
+
+
+
+
+2009-03-30T22:56:50.000000Z
+5e9ac81e1080f47a08a58104baecc585
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+

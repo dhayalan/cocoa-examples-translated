@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods
+END
+validates_confirmation_of-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates_confirmation_of-i.yaml
+END
+validates_format_of-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates_format_of-i.yaml
+END
+validate-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validate-i.yaml
+END
+validates-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates-i.yaml
+END
+validates_each-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates_each-i.yaml
+END
+validations-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validations-i.yaml
+END
+validates_length_of-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates_length_of-i.yaml
+END
+cdesc-ClassMethods.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/cdesc-ClassMethods.yaml
+END
+validates_presence_of-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates_presence_of-i.yaml
+END
+validates_numericality_of-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates_numericality_of-i.yaml
+END
+has_validations%3f-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/has_validations%253f-i.yaml
+END
+validates_acceptance_of-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/validates_acceptance_of-i.yaml
+END
+skip_superclass_validations-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/Bookshelf/!svn/ver/35750/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation/ClassMethods/skip_superclass_validations-i.yaml
+END

@@ -1,0 +1,52 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/ParseTree-2.1.1/ri/Class
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+modules-i.yaml
+file
+
+
+
+
+2009-03-30T22:56:53.000000Z
+74ec4d754b4fc9aa3543c82379e3b5f2
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+cdesc-Class.yaml
+file
+
+
+
+
+2009-03-30T22:56:53.000000Z
+1cdc1ffa1de05a38a316821de61faa38
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+

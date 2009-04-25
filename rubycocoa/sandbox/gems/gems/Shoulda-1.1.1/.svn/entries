@@ -1,0 +1,73 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/gems/Shoulda-1.1.1
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-05-25T20:41:36.753403Z
+35651
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+3756da243a12f25fa282fa7e27371995
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+Manifest.txt
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+4d81861e1c35204283ef5d8e849ebfb3
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+lib
+dir
+
+bin
+dir
+
+README.txt
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+e9538292feca98a6d82476d2cd0df389
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+

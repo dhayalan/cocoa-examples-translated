@@ -1,0 +1,73 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-10-23T20:33:09.309729Z
+44472
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+assert2-0.3.2
+dir
+
+ramaze-0.3.9.1
+dir
+
+rake-0.8.1
+dir
+
+ParseTree-2.1.1
+dir
+
+RubyInline-3.6.7
+dir
+
+Shoulda-1.1.1
+dir
+
+sequel-1.4.0
+dir
+
+assistance-0.1.5
+dir
+
+metaid-1.0
+dir
+
+sequel_core-1.4.0
+dir
+
+rubyforge-0.4.5
+dir
+
+ruby2ruby-1.1.8
+dir
+
+hoe-1.5.1
+dir
+
+flexmock-0.8.2
+dir
+
+rack-0.3.0
+dir
+

@@ -1,0 +1,97 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/assistance-0.1.5/ri/Validation
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+validate-i.yaml
+file
+
+
+
+
+2009-03-30T22:57:01.000000Z
+4aad5114a36a24405d0035525105cd5b
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+errors-i.yaml
+file
+
+
+
+
+2009-03-30T22:57:01.000000Z
+829e4858180bcdfe555069d81bdbff15
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+valid%3f-i.yaml
+file
+
+
+
+
+2009-03-30T22:57:01.000000Z
+30d310b73f2c00ede42ac16214c44ffd
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Generator
+dir
+
+included-c.yaml
+file
+
+
+
+
+2009-03-30T22:57:01.000000Z
+43c7ee2e4a63ec19aac3494528cb910d
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+ClassMethods
+dir
+
+cdesc-Validation.yaml
+file
+
+
+
+
+2009-03-30T22:57:01.000000Z
+58756c069bd270b2616132565d52564a
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Errors
+dir
+

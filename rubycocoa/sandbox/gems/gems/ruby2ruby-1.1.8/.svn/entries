@@ -1,0 +1,97 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/gems/ruby2ruby-1.1.8
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+test
+dir
+
+History.txt
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+258dfc193f64b4116886bc45c19875a7
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Rakefile
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+0331f0907ae7d01e110cb914b7b3e47a
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Manifest.txt
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+f44ae201fa00ee9eaff2b1b2c0a5535b
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+lib
+dir
+
+.autotest
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+db3283414f1c8a55a04e5ff237ee3c2c
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+bin
+dir
+
+README.txt
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+64bb22b509ad39cef6bfe8c95e42d0a8
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+

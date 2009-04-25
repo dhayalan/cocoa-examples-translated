@@ -1,0 +1,52 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/gems/RubyInline-3.6.7/demo
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+hello.rb
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+276bb83e544f3ccedbecc9cfe8d3e775
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+fastmath.rb
+file
+
+
+
+
+2009-03-30T22:57:19.000000Z
+40ef75db5e0956f96c83ffe5a9426858
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+

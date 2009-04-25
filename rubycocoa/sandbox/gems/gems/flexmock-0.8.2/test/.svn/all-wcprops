@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test
+END
+test_examples_from_readme.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_examples_from_readme.rb
+END
+test_flexmodel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_flexmodel.rb
+END
+test_extended_should_receive.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_extended_should_receive.rb
+END
+test_record_mode.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_record_mode.rb
+END
+test_deprecated_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_deprecated_methods.rb
+END
+asserts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/asserts.rb
+END
+test_aliasing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_aliasing.rb
+END
+test_should_ignore_missing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_should_ignore_missing.rb
+END
+test_tu_integration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_tu_integration.rb
+END
+test_demeter_mocking.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_demeter_mocking.rb
+END
+test_should_receive.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_should_receive.rb
+END
+test_new_instances.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_new_instances.rb
+END
+test_undefined.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_undefined.rb
+END
+test_default_framework_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_default_framework_adapter.rb
+END
+test_rails_view_stub.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_rails_view_stub.rb
+END
+test_samples.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_samples.rb
+END
+test_partial_mock.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_partial_mock.rb
+END
+test_container_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_container_methods.rb
+END
+test_naming.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/test_naming.rb
+END
+redirect_error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/test/redirect_error.rb
+END

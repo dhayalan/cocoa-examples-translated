@@ -1,0 +1,43 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/gems/flexmock-0.8.2/lib
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+flexmock
+dir
+
+flexmock.rb
+file
+
+
+
+
+2009-03-30T22:57:20.000000Z
+496af05895f993cdbf2c4e6613df3919
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+

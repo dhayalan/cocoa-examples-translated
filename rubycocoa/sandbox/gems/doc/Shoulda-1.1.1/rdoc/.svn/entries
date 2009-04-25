@@ -1,0 +1,106 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/Shoulda-1.1.1/rdoc
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+fr_file_index.html
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+4ddc16b2eec669d76bbdb7e3a810682e
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+fr_method_index.html
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+0078e09d5384b45a126161e3b1241e07
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+files
+dir
+
+created.rid
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+171170f861413bc3124a4880c13609a1
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+fr_class_index.html
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+057cba60353152f532fe31a38673ab68
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+index.html
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+2f175d18e971dbf20a58ada19a1cc368
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+rdoc-style.css
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+07cc32aa3b88f9911fe43613a29650a3
+2008-05-25T20:31:24.028611Z
+35647
+brian.marick
+
+classes
+dir
+

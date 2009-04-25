@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer
+END
+flexmock-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/flexmock-i.yaml
+END
+flexmock_teardown-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/flexmock_teardown-i.yaml
+END
+flexmock_verify-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/flexmock_verify-i.yaml
+END
+flexstub-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/flexstub-i.yaml
+END
+flexmock_close-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/flexmock_close-i.yaml
+END
+rails_version-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/rails_version-i.yaml
+END
+cdesc-MockContainer.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/cdesc-MockContainer.yaml
+END
+flexmock_remember-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/flexmock_remember-i.yaml
+END
+should_render_view-i.yaml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/Bookshelf/!svn/ver/35755/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/FlexMock/MockContainer/should_render_view-i.yaml
+END

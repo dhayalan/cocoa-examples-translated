@@ -1,0 +1,106 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/ParseTree-2.1.1/rdoc
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+fr_file_index.html
+file
+
+
+
+
+2009-03-30T22:56:52.000000Z
+2e84cb4f6d4d782b696f3f2ddc3270e3
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+fr_method_index.html
+file
+
+
+
+
+2009-03-30T22:56:52.000000Z
+1318990b40eb9091d0a2a76517c1b0f7
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+files
+dir
+
+created.rid
+file
+
+
+
+
+2009-03-30T22:56:52.000000Z
+9a03339a150a5b44bf9f2973b509ad79
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+fr_class_index.html
+file
+
+
+
+
+2009-03-30T22:56:52.000000Z
+ae81741f4b646deb417e046635c2bfdc
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+index.html
+file
+
+
+
+
+2009-03-30T22:56:52.000000Z
+2f175d18e971dbf20a58ada19a1cc368
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+rdoc-style.css
+file
+
+
+
+
+2009-03-30T22:56:52.000000Z
+07cc32aa3b88f9911fe43613a29650a3
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+classes
+dir
+

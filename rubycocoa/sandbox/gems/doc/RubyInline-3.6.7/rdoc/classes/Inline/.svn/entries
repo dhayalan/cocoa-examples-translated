@@ -1,0 +1,58 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/RubyInline-3.6.7/rdoc/classes/Inline
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+Packager.html
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+50dd4df5feb8f8ae2dd5c05001c53929
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+Packager.src
+dir
+
+C.html
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+ffe006232875811814f05a8b74ec5e55
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+C.src
+dir
+

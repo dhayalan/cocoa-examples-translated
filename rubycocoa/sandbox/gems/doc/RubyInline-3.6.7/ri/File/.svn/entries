@@ -1,0 +1,52 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/RubyInline-3.6.7/ri/File
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+cdesc-File.yaml
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+c7c9461e6e592703c1ce696d449887e7
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+
+write_with_backup-c.yaml
+file
+
+
+
+
+2009-03-30T22:56:56.000000Z
+635be5ba2b730a8ede94f6de277bde65
+2008-04-15T17:33:37.684164Z
+33680
+brian.marick
+

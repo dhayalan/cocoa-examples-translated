@@ -1,0 +1,52 @@
+8
+
+dir
+55133
+https://svn.pragprog.com/Bookshelf/titles/BMRC/Book/code/sandbox/gems/doc/flexmock-0.8.2/ri/Test/Unit/TestCase
+https://svn.pragprog.com/Bookshelf
+
+
+
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+82263e25-b5eb-0310-b4ec-9460fbaf34b7
+
+teardown-i.yaml
+file
+
+
+
+
+2009-03-30T22:56:58.000000Z
+08a5a13105e82fc01ff2463e9894fec0
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+
+cdesc-TestCase.yaml
+file
+
+
+
+
+2009-03-30T22:56:58.000000Z
+71e60fe22f584ab058da4e60ad4c1263
+2008-05-27T16:56:02.464471Z
+35755
+brian.marick
+
