@@ -178,7 +178,7 @@
 	<key>FavBarConfig</key>
 	<dict>
 		<key>PBXProjectModuleGUID</key>
-		<string>7837DD6F0F8E7EA100EDF6A8</string>
+		<string>78D8CEA50FA5EDB4009A6A66</string>
 		<key>XCBarModuleItemNames</key>
 		<dict/>
 		<key>XCBarModuleItems</key>
@@ -197,52 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-<<<<<<< HEAD:rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj/marick.mode1v3
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>7884251C0F964201004FC92B</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>TilePuzzle_DataModel.xcdatamodel</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>7884251D0F964201004FC92B</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>TilePuzzle_DataModel.xcdatamodel</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>783BEEC20F992638002A8C25</string>
-						<key>history</key>
-						<array>
-							<string>783BEEC10F992638002A8C25</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {888, 781}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>19 51 888 822 0 0 1440 878 </string>
-			</dict>
-		</dict>
-	</array>
-=======
 	<array/>
->>>>>>> container-danger:rubycocoa/gotchas/singleton-death/TilePuzzle.xcodeproj/marick.mode1v3
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -314,25 +269,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
-								<string>7756732906782D8800D1FEB8</string>
-								<string>080E96DDFE201D6D7F000001</string>
-								<string>29B97315FDCFA39411CA2CEA</string>
-								<string>1C37FBAC04509CD000000102</string>
-								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
-								<string>1CC0EA4004350EF90044410B</string>
-								<string>1CC0EA4004350EF90041110B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-<<<<<<< HEAD:rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj/marick.mode1v3
-									<integer>10</integer>
 									<integer>0</integer>
-=======
-									<integer>31</integer>
-									<integer>30</integer>
->>>>>>> container-danger:rubycocoa/gotchas/singleton-death/TilePuzzle.xcodeproj/marick.mode1v3
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -355,7 +297,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>667 240 690 397 0 0 1440 878 </string>
+						<string>377 374 690 397 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -392,7 +334,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {482, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>667 240 690 397 0 0 1440 878 </string>
+								<string>377 374 690 397 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -412,7 +354,7 @@
 								<key>Frame</key>
 								<string>{{0, 5}, {482, 351}}</string>
 								<key>RubberWindowFrame</key>
-								<string>667 240 690 397 0 0 1440 878 </string>
+								<string>377 374 690 397 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -436,15 +378,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-<<<<<<< HEAD:rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj/marick.mode1v3
-				<string>783BEEBF0F992638002A8C25</string>
+				<string>78D8CEA30FA5EDB4009A6A66</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>783BEEC00F992638002A8C25</string>
-=======
-				<string>784A103A0FA1176F00305D05</string>
-				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>784A103B0FA1176F00305D05</string>
->>>>>>> container-danger:rubycocoa/gotchas/singleton-death/TilePuzzle.xcodeproj/marick.mode1v3
+				<string>78D8CEA40FA5EDB4009A6A66</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -579,16 +515,12 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>78BD9D050F8E97810031A3E7</string>
-<<<<<<< HEAD:rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj/marick.mode1v3
-		<string>7884251C0F964201004FC92B</string>
-=======
->>>>>>> container-danger:rubycocoa/gotchas/singleton-death/TilePuzzle.xcodeproj/marick.mode1v3
-		<string>/Users/marick/src/publish/cocoa-examples-translated/rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj</string>
+		<string>78D8CEA60FA5EDB4009A6A66</string>
+		<string>/Users/marick/src/publish/cocoa-examples-translated/rubycocoa/CoreData/TilePuzzle/TilePuzzle.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>667 240 690 397 0 0 1440 878 </string>
+	<string>377 374 690 397 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -618,7 +550,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {500, 218}}</string>
 								<key>RubberWindowFrame</key>
-								<string>419 225 500 500 0 0 1440 878 </string>
+								<string>398 248 500 500 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -642,7 +574,7 @@
 								<key>Frame</key>
 								<string>{{0, 223}, {500, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>419 225 500 500 0 0 1440 878 </string>
+								<string>398 248 500 500 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -664,21 +596,17 @@
 			<true/>
 			<key>TableOfContents</key>
 			<array>
-				<string>78BD9D050F8E97810031A3E7</string>
-<<<<<<< HEAD:rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj/marick.mode1v3
-				<string>783BEEC30F992638002A8C25</string>
-=======
-				<string>784A103D0FA215C800305D05</string>
->>>>>>> container-danger:rubycocoa/gotchas/singleton-death/TilePuzzle.xcodeproj/marick.mode1v3
+				<string>78D8CEA60FA5EDB4009A6A66</string>
+				<string>78D8CEA70FA5EDB4009A6A66</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>419 225 500 500 0 0 1440 878 </string>
+			<string>398 248 500 500 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
-			<string>78BD9D050F8E97810031A3E7</string>
+			<string>78D8CEA60FA5EDB4009A6A66</string>
 			<key>WindowToolIsVisible</key>
 			<false/>
 		</dict>
@@ -711,8 +639,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 203}}</string>
-											<string>{{316, 0}, {378, 203}}</string>
+											<string>{{0, 0}, {316, 185}}</string>
+											<string>{{316, 0}, {378, 185}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -727,8 +655,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 203}}</string>
-											<string>{{0, 203}, {694, 178}}</string>
+											<string>{{0, 0}, {694, 185}}</string>
+											<string>{{0, 185}, {694, 196}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -761,12 +689,12 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 203}}</string>
+									<string>{{316, 0}, {378, 185}}</string>
 									<key>RubberWindowFrame</key>
-									<string>419 303 694 422 0 0 1440 878 </string>
+									<string>398 326 694 422 0 0 1440 878 </string>
 								</dict>
 								<key>RubberWindowFrame</key>
-								<string>419 303 694 422 0 0 1440 878 </string>
+								<string>398 326 694 422 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugSessionModule</string>
@@ -789,28 +717,18 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-<<<<<<< HEAD:rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj/marick.mode1v3
-				<string>783BEEC40F992638002A8C25</string>
+				<string>78D8CEA80FA5EDB4009A6A66</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>783BEEC50F992638002A8C25</string>
-				<string>783BEEC60F992638002A8C25</string>
-				<string>783BEEC70F992638002A8C25</string>
-				<string>783BEEC80F992638002A8C25</string>
-				<string>783BEEC90F992638002A8C25</string>
-=======
-				<string>784A103E0FA215C800305D05</string>
-				<string>1C162984064C10D400B95A72</string>
-				<string>784A103F0FA215C800305D05</string>
-				<string>784A10400FA215C800305D05</string>
-				<string>784A10410FA215C900305D05</string>
-				<string>784A10420FA215C900305D05</string>
-				<string>784A10430FA215C900305D05</string>
->>>>>>> container-danger:rubycocoa/gotchas/singleton-death/TilePuzzle.xcodeproj/marick.mode1v3
+				<string>78D8CEA90FA5EDB4009A6A66</string>
+				<string>78D8CEAA0FA5EDB4009A6A66</string>
+				<string>78D8CEAB0FA5EDB4009A6A66</string>
+				<string>78D8CEAC0FA5EDB4009A6A66</string>
+				<string>78D8CEAD0FA5EDB4009A6A66</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
 			<key>WindowString</key>
-			<string>419 303 694 422 0 0 1440 878 </string>
+			<string>398 326 694 422 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
@@ -944,18 +862,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {541, 371}}</string>
+								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>488 433 541 412 0 0 1440 878 </string>
+								<string>398 498 650 250 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
 							<key>Proportion</key>
-							<string>371pt</string>
+							<string>209pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>371pt</string>
+					<string>209pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -969,17 +887,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-<<<<<<< HEAD:rubycocoa/CoreData/TilePuzzle.refactored/TilePuzzle.xcodeproj/marick.mode1v3
-				<string>783BEECA0F992638002A8C25</string>
-=======
-				<string>784A10440FA215C900305D05</string>
->>>>>>> container-danger:rubycocoa/gotchas/singleton-death/TilePuzzle.xcodeproj/marick.mode1v3
+				<string>78D8CEAE0FA5EDB4009A6A66</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>488 433 541 412 0 0 1440 878 </string>
+			<string>398 498 650 250 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

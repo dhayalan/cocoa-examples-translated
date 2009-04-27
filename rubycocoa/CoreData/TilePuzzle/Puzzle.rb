@@ -72,7 +72,6 @@ class Puzzle < OSX::NSObject
     # fetched into the Ruby universe. By putting them inside a Ruby
     # container, that fate is avoided.
     # See rubycocoa/gotchas/object-id-simple.
-    puts "This doesn't actually work."
     tiles.to_a
   end
 
