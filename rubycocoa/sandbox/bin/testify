@@ -1,0 +1,49 @@
+#!/usr/bin/env ruby    
+# Hey Emacs, this is -*- Ruby -*- code.
+
+require 'fileutils'
+include FileUtils
+
+def template_dir
+  File.dirname(__FILE__) + "/../overrides-to-app-support-files"
+end
+
+def template_file(file)
+  "#{template_dir}/#{file}"
+end
+
+def install(file, to=file)
+  rm_f file
+  cp template_file(file), to
+end
+
+def install_dir(dir, to=dir)
+  cp_r template_file(dir), to
+end
+
+def install_and_edit(file, to=file)
+  text = IO.read(template_file(file))
+  yield(text)
+  File.open(to, 'w') do | io | 
+    io.puts(text)
+  end
+end
+
+                 
+
+
+
+install 'rb_main.rb'
+install 'path-setting.rb'
+
+install_and_edit('Rakefile') do | text |
+  appname = Dir.getwd.split('/').last
+  text.gsub!(/--REPLACE WITH REAL APP NAME--/, appname)
+end
+
+install_dir 'test'
+
+
+puts "You must manually add the file path-setting.rb to the project."
+
+exit 0

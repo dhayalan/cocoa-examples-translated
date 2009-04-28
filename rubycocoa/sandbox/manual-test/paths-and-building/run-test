@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+# -*- Ruby -*-
+
+require 'fileutils'
+include FileUtils
+
+SANDBOX_DIR = "../.."
+
+rm_rf "tmp/PlainRubyCocoa"
+cp_r "sample-apps/PlainRubyCocoa", 'tmp'
+Dir.chdir('tmp/PlainRubyCocoa')
+system("#{SANDBOX_DIR}/../../bin/testify")
+
+
+puts %q{
+1. rake to build debug version
+        - you should see message about App Delegate having been loaded.
+        - check that last line mentions Debug
+2. rake clean
+3. Configuration=Release rake
+        - you should see message about App Delegate having been loaded.
+        - check that last line mentions Release
+4. (mkdir subdir; cd subdir; rake) 
+        - you should see message about App Delegate having been loaded.
+
+XCode:
+1. Build from Xcode as Debug
+2. Break AppDelegate, build from Xcode as debug - breakage should show.b
+3. Fix breakage, Clean, and rebuild - fixed?
+4. Build from Xcode as Release
+5. Break AppDelegate, build from Xcode as debug - break should show.
+
+Tests:
+
+1. cd test; ruby sample-test.rb
+        - make sure that there is a message about top level sample test running
+2. (cd subdir; ruby sample-test.rb)
+        - make sure that there is a message about subdir sample test running
+3. (cd subdir; rake)        
+        - make sure that there is a message about subdir sample test running
+4. rake
+        - make sure that there is a message about top level sample test running
+        - make sure that there is a message about subdir sample test running
+
+
+}

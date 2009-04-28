@@ -1,0 +1,94 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = 78574E810FA64A0B001DBDEB /* PlainRubyCocoa */;
+		activeTarget = 4DDCA7030ACC9A6100E082CE /* PlainRubyCocoa */;
+		addToTargets = (
+			4DDCA7030ACC9A6100E082CE /* PlainRubyCocoa */,
+		);
+		codeSenseManager = 78574E880FA64A10001DBDEB /* Code sense */;
+		executables = (
+			78574E810FA64A0B001DBDEB /* PlainRubyCocoa */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 262644911;
+			PBXWorkspaceStateSaveDate = 262644911;
+		};
+		sourceControlManager = 78574E870FA64A10001DBDEB /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4DDCA7030ACC9A6100E082CE /* PlainRubyCocoa */ = {
+		activeExec = 0;
+		executables = (
+			78574E810FA64A0B001DBDEB /* PlainRubyCocoa */,
+		);
+	};
+	78574E810FA64A0B001DBDEB /* PlainRubyCocoa */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = PlainRubyCocoa;
+		sourceDirectories = (
+		);
+	};
+	78574E870FA64A10001DBDEB /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	78574E880FA64A10001DBDEB /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {829, 727}}";
+			sepNavSelRange = "{495, 0}";
+			sepNavVisRange = "{0, 495}";
+			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
+		};
+	};
+}
