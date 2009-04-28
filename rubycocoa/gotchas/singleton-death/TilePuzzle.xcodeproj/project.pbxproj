@@ -19,6 +19,7 @@
 		78BD9D2A0F8E98990031A3E7 /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */; };
 		78BD9D2E0F8E98DD0031A3E7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */; };
 		78BD9D310F8E99170031A3E7 /* TilesView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D300F8E99170031A3E7 /* TilesView.rb */; };
+		78F0F6470FA7AB4F00BA3217 /* path-setting.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78F0F6460FA7AB4F00BA3217 /* path-setting.rb */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -46,6 +47,7 @@
 		78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		78BD9D300F8E99170031A3E7 /* TilesView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TilesView.rb; sourceTree = "<group>"; };
+		78F0F6460FA7AB4F00BA3217 /* path-setting.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "path-setting.rb"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TilePuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TilePuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				78F0F6460FA7AB4F00BA3217 /* path-setting.rb */,
 				786FBB380F94E50D00F29BAA /* constants.rb */,
 				78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */,
 				32CA4F630368D1EE00C91783 /* TilePuzzle_Prefix.pch */,
@@ -211,6 +214,7 @@
 				78B2AFAC0F97CFDB00D2D6E9 /* BoardPosition.rb in Resources */,
 				78B2AFC00F97DB4E00D2D6E9 /* ApplicationSupport.rb in Resources */,
 				78B2AFCB0F97DDBE00D2D6E9 /* PersistentStore.rb in Resources */,
+				78F0F6470FA7AB4F00BA3217 /* path-setting.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

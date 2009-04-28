@@ -71,12 +71,13 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 262645376;
-			PBXWorkspaceStateSaveDate = 262645376;
+			PBXPerProjectTemplateStateSaveDate = 262646746;
+			PBXWorkspaceStateSaveDate = 262646746;
 		};
 		perUserProjectItems = {
-			78B1024A0FA7A68700BBF505 /* PBXBookmark */ = 78B1024A0FA7A68700BBF505 /* PBXBookmark */;
-			78B1024B0FA7A68700BBF505 /* XDModelBookmark */ = 78B1024B0FA7A68700BBF505 /* XDModelBookmark */;
+			783216FB0FA7ABDD009FD5C9 /* XDModelBookmark */ = 783216FB0FA7ABDD009FD5C9 /* XDModelBookmark */;
+			78B102540FA7AB2900BBF505 = 78B102540FA7AB2900BBF505 /* XDModelBookmark */;
+			78F0F64E0FA7ABD600BA3217 = 78F0F64E0FA7ABD600BA3217 /* XDModelBookmark */;
 		};
 		sourceControlManager = 7837DD6B0F8D53FF00EDF6A8 /* Source Control */;
 		userBuildSettings = {
@@ -108,7 +109,7 @@
 					chosenTableWidths = (
 						103.000000,
 						22.000000,
-						64.080078,
+						63.080078,
 					);
 				};
 				UIContextForLayoutManager = {
@@ -138,8 +139,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {214, 218}}",
-							"{{219, 0}, {360, 218}}",
+							"{{0, 0}, {213, 218}}",
+							"{{218, 0}, {359, 218}}",
 						);
 					};
 				};
@@ -241,48 +242,7 @@
 			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
 	};
-	7837DD660F8D53E100EDF6A8 /* TilePuzzle */ = {
-		isa = PBXExecutable;
-		activeArgIndices = (
-		);
-		argumentStrings = (
-		);
-		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
-		configStateDict = {
-		};
-		customDataFormattersEnabled = 1;
-		debuggerPlugin = GDBDebugging;
-		disassemblyDisplayState = 0;
-		dylibVariantSuffix = "";
-		enableDebugStr = 1;
-		environmentEntries = (
-		);
-		executableSystemSymbolLevel = 0;
-		executableUserSymbolLevel = 0;
-		libgmallocEnabled = 0;
-		name = TilePuzzle;
-		savedGlobals = {
-		};
-		sourceDirectories = (
-		);
-	};
-	7837DD6B0F8D53FF00EDF6A8 /* Source Control */ = {
-		isa = PBXSourceControlManager;
-		fallbackIsa = XCSourceControlManager;
-		isSCMEnabled = 0;
-		scmConfiguration = {
-		};
-	};
-	7837DD6C0F8D53FF00EDF6A8 /* Code sense */ = {
-		isa = PBXCodeSenseManager;
-		indexTemplatePath = "";
-	};
-	78B1024A0FA7A68700BBF505 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-	};
-	78B1024B0FA7A68700BBF505 /* XDModelBookmark */ = {
+	783216FB0FA7ABDD009FD5C9 /* XDModelBookmark */ = {
 		isa = XDModelBookmark;
 		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
@@ -310,7 +270,7 @@
 				chosenTableWidths = (
 					103.000000,
 					22.000000,
-					64.080078,
+					63.080078,
 				);
 			};
 			UIContextForLayoutManager = {
@@ -340,8 +300,8 @@
 					_percentageOfCollapsedView = 0;
 					isCollapsed = yes;
 					sizes = (
-						"{{0, 0}, {214, 218}}",
-						"{{219, 0}, {360, 218}}",
+						"{{0, 0}, {213, 218}}",
+						"{{218, 0}, {359, 218}}",
 					);
 				};
 			};
@@ -444,6 +404,53 @@
 			"xdesign model selected properties key" = (
 			);
 		};
+	};
+	7837DD660F8D53E100EDF6A8 /* TilePuzzle */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = TilePuzzle;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+	};
+	7837DD6B0F8D53FF00EDF6A8 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	7837DD6C0F8D53FF00EDF6A8 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	78B102540FA7AB2900BBF505 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
+	};
+	78F0F64E0FA7ABD600BA3217 /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
 	};
 	8D1107260486CEB800E47090 /* TilePuzzle */ = {
 		activeExec = 0;

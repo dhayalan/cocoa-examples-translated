@@ -1,23 +1,19 @@
+# This version of rb_main.rb is derived from the one Xcode provides,
+# but it allows third-party libraries and gems within the app
+# bundle. It also prevents libraries and gems that are not in the app
+# bundle from being required (except for the ones Apple provides to
+# everyone).
 #
-#  rb_main.rb
-#  Fenestra
-#
-#  Created by Brian Marick on 5/10/08.
-#  Copyright (c) 2008 Exampler Consulting. All rights reserved.
-#
+# Created by Brian Marick (marick@exampler.com) on 5/10/08.
 
 require 'osx/cocoa'
-
-def rb_main_init
-  path = OSX::NSBundle.mainBundle.resourcePath.fileSystemRepresentation
-  rbfiles = Dir.entries(path).select {|x| /\.rb\z/ =~ x}
-  rbfiles -= [ File.basename(__FILE__) ]
-  rbfiles.each do |path|
-    require( File.basename(path) )
-  end
-end
+require 'path-setting'
 
 if $0 == __FILE__ then
-  rb_main_init
+  OSX::NSLog "RubyCocoa version is #{OSX::RUBYCOCOA_VERSION}."
+  RubyCocoaLocations.do_not_use_site_specific_libs_and_gems
+  RubyCocoaLocations.put_apps_third_party_libs_and_gems_in_load_path
+  RubyCocoaLocations.put_apps_ruby_source_in_load_path
+  RubyCocoaLocations.load_ruby_files
   OSX.NSApplicationMain(0, nil)
 end
