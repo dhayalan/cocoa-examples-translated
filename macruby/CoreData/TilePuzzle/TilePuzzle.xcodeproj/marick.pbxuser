@@ -57,7 +57,7 @@
 					203,
 					60,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 				);
@@ -71,15 +71,19 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 262814298;
-			PBXWorkspaceStateSaveDate = 262814298;
-		};
-		perUserProjectItems = {
-			78D226490FA6190600D42D6B = 78D226490FA6190600D42D6B /* XDModelBookmark */;
-			78D2264A0FA6190600D42D6B = 78D2264A0FA6190600D42D6B /* XDModelBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 262817044;
+			PBXWorkspaceStateSaveDate = 262817044;
 		};
 		sourceControlManager = 7837DD6B0F8D53FF00EDF6A8 /* Source Control */;
 		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {829, 750}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 117}";
+			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
 	};
 	770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */ = {
@@ -108,7 +112,7 @@
 					chosenTableWidths = (
 						103.000000,
 						22.000000,
-						63.080078,
+						64.080078,
 					);
 				};
 				UIContextForLayoutManager = {
@@ -129,7 +133,7 @@
 						isCollapsed = yes;
 						sizes = (
 							"{{0, 0}, {888, 220}}",
-							"{{0, 225}, {888, 517}}",
+							"{{0, 225}, {888, 540}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -138,8 +142,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {213, 220}}",
-							"{{218, 0}, {359, 220}}",
+							"{{0, 0}, {214, 220}}",
+							"{{219, 0}, {360, 220}}",
 						);
 					};
 				};
@@ -236,7 +240,7 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{-113, -35}, {873, 502}}";
+				"xdesign model diagram view visible rect key" = "{{-113, -47}, {873, 525}}";
 			};
 			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
@@ -278,20 +282,18 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	78D226490FA6190600D42D6B /* XDModelBookmark */ = {
-		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-		fallbackIsa = PBXBookmark;
-	};
-	78D2264A0FA6190600D42D6B /* XDModelBookmark */ = {
-		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-		fallbackIsa = PBXBookmark;
-	};
 	8D1107260486CEB800E47090 /* TilePuzzle */ = {
 		activeExec = 0;
 		executables = (
 			7837DD660F8D53E100EDF6A8 /* TilePuzzle */,
 		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {829, 750}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 856}";
+			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
+		};
 	};
 }

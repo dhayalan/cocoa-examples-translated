@@ -3,7 +3,7 @@ require 'TilesView'
 
 class TilePuzzleAppDelegate
 
-  ib_outlet :window, :puzzle, :view
+  attr_writer :window, :puzzle, :view
   
   def windowWillReturnUndoManager(sender)
     @puzzle.undo_manager

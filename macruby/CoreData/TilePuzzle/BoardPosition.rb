@@ -3,8 +3,8 @@ class BoardPosition
 
 
   def self.for_tile(tile, xkey, ykey)
-    x = tile.valueForKey(xkey).to_i
-    y = tile.valueForKey(ykey).to_i
+    x = tile.valueForKey(xkey).intValue
+    y = tile.valueForKey(ykey).intValue
     at(x, y)
   end
 

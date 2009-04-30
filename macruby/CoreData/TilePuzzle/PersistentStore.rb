@@ -9,7 +9,6 @@ class PersistentStore
   end
 
   def init
-    super_init
     allBundles = NSMutableSet.alloc.init
     allBundles.addObject(NSBundle.mainBundle)
     allBundles.addObjectsFromArray(NSBundle.allFrameworks)
@@ -51,7 +50,7 @@ class PersistentStore
   end
 
   def execute_fetch(request)
-    managedObjectContext.executeFetchRequest: request, error nil
+    managedObjectContext.executeFetchRequest request, error: nil
   end
 
   def insert_by_name(name, settings = {})

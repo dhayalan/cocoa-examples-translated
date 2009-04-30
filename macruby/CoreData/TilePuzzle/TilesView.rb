@@ -2,15 +2,15 @@ require 'constants'
 require 'util'
 require 'BoardPosition'
 
-class TilesView
+class TilesView < NSView
   include Utilities
 
-  ib_outlet :puzzle
+  attr_writer :puzzle
 
   # View protocol
 
   def awakeFromNib
-    NSNotificationCenter.defaultCenter.addObserver, self,
+    NSNotificationCenter.defaultCenter.addObserver self,
                                        selector: 'didUndo:',
                                        name: nil,
                                        object: @puzzle.undo_manager
@@ -61,13 +61,13 @@ class TilesView
     to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
     from = @puzzle_image.tile_rect(tile.ending_position)
 
-    @puzzle_image.compositeToPoint: to,
+    @puzzle_image.compositeToPoint to,
                   fromRect: from,
                   operation: NSCompositeCopy
   end
 
   def move_tile(tile_position)
-    @puzzle.move_tile(tile_position, on_error { NSBeep })
+    @puzzle.move_tile(tile_position, on_error { NSBeep() })
   end
 
 

@@ -19,5 +19,5 @@ end
 
 if $0 == __FILE__ then
   rb_main_init
-  OSX.NSApplicationMain(0, nil)
+  NSApplicationMain(0, nil)
 end

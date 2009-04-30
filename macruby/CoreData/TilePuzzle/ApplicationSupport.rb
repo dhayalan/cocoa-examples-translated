@@ -11,13 +11,13 @@ class ApplicationSupport
   def folder_name
     return @folder_name if @folder_name
 
-    paths = OSX.NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, true)
+    paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, true)
     @folder_name = paths[0].stringByAppendingPathComponent(@appname)
   end
 
   def force_application_support_folder
     unless @fileManager.fileExistsAtPath(folder_name)
-      @fileManager.createDirectoryAtPath folder_name, attributes: nil)
+      @fileManager.createDirectoryAtPath folder_name, attributes: nil
     end
   end
 

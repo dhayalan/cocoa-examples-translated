@@ -6,7 +6,6 @@ require 'PersistentStore'
 class Puzzle
 
   def init
-    super_init
     @persistent_store = PersistentStore.alloc.init
     create_all_tiles if @persistent_store.fresh?
     self
