@@ -3,8 +3,7 @@ require 'BoardPosition'
 require 'ApplicationSupport'
 require 'PersistentStore'
 
-class Puzzle < OSX::NSObject
-  include OSX
+class Puzzle
 
   def init
     super_init

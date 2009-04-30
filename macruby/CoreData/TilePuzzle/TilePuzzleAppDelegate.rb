@@ -1,8 +1,7 @@
 require 'constants'
 require 'TilesView'
 
-class TilePuzzleAppDelegate < OSX::NSObject
-  include OSX
+class TilePuzzleAppDelegate
 
   ib_outlet :window, :puzzle, :view
   

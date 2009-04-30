@@ -2,8 +2,7 @@ require 'constants'
 require 'util'
 require 'BoardPosition'
 
-class TilesView < OSX::NSView
-  include OSX
+class TilesView
   include Utilities
 
   ib_outlet :puzzle
@@ -11,10 +10,10 @@ class TilesView < OSX::NSView
   # View protocol
 
   def awakeFromNib
-    NSNotificationCenter.defaultCenter.objc_send(:addObserver, self,
-                                                 :selector, 'didUndo:',
-                                                 :name, nil,
-                                                 :object, @puzzle.undo_manager)
+    NSNotificationCenter.defaultCenter.addObserver, self,
+                                       selector: 'didUndo:',
+                                       name: nil,
+                                       object: @puzzle.undo_manager
 
     @puzzle_image = find_puzzle_image
     user_wants_to_solve_puzzle
@@ -62,19 +61,19 @@ class TilesView < OSX::NSView
     to = tile_position_in_view_coordinates(tile.send(@position_to_display), rect)
     from = @puzzle_image.tile_rect(tile.ending_position)
 
-    @puzzle_image.objc_send(:compositeToPoint, to,
-                            :fromRect, from,
-                            :operation, NSCompositeCopy)
+    @puzzle_image.compositeToPoint: to,
+                  fromRect: from,
+                  operation: NSCompositeCopy
   end
 
   def move_tile(tile_position)
-    @puzzle.move_tile(tile_position, on_error { OSX.NSBeep })
+    @puzzle.move_tile(tile_position, on_error { NSBeep })
   end
 
 
   def tile_position_clicked(event)
     locationInView = event.locationInWindow
-    locationInView = convertPoint_fromView(locationInView, nil)
+    locationInView = convertPoint locationInView, fromView: nil
     viewWidth = NSWidth(bounds)
     viewHeight = NSHeight(bounds)
     tileX = (locationInView.x / viewWidth * TileGridSize).to_i

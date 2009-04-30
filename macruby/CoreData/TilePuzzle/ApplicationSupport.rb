@@ -1,5 +1,4 @@
-class ApplicationSupport < OSX::NSObject
-  include OSX
+class ApplicationSupport
 
   def initForApp(appname)
     init
@@ -18,8 +17,7 @@ class ApplicationSupport < OSX::NSObject
 
   def force_application_support_folder
     unless @fileManager.fileExistsAtPath(folder_name)
-      @fileManager.objc_send(:createDirectoryAtPath, folder_name,
-                             :attributes, nil)
+      @fileManager.createDirectoryAtPath folder_name, attributes: nil)
     end
   end
 

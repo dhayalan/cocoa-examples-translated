@@ -1,4 +1,4 @@
-class BoardPosition < OSX::NSObject
+class BoardPosition
   attr_reader :x, :y
 
 
@@ -9,10 +9,10 @@ class BoardPosition < OSX::NSObject
   end
 
   def self.at(x, y)
-    BoardPosition.alloc.initAtX_andY(x, y)
+    BoardPosition.alloc.initAtX x, andY: y
   end
 
-  def initAtX_andY(x, y)
+  def initAtX x, andY: y
     init
     @x = x
     @y = y

@@ -1,7 +1,6 @@
 require 'util'
 
-class PersistentStore < OSX::NSObject
-  include OSX
+class PersistentStore
   
   attr_accessor :managedObjectModel, :managedObjectContext
   
@@ -21,11 +20,11 @@ class PersistentStore < OSX::NSObject
     @is_fresh = ! app_support.file_exists?("TilePuzzle.xml")
     
     coordinator = NSPersistentStoreCoordinator.alloc.initWithManagedObjectModel(managedObjectModel)
-    coordinator.objc_send(:addPersistentStoreWithType, NSXMLStoreType,
-                          :configuration, nil,
-                          :URL, app_support.file_url("TilePuzzle.xml"),
-                          :options, nil,
-                          :error, nil)
+    coordinator.addPersistentStoreWithType NSXMLStoreType,
+                configuration: nil,
+                URL: app_support.file_url("TilePuzzle.xml"),
+                options: nil,
+                error: nil
 
     @managedObjectContext = NSManagedObjectContext.alloc.init
     @managedObjectContext.persistentStoreCoordinator = coordinator
@@ -39,9 +38,8 @@ class PersistentStore < OSX::NSObject
   end
 
   def fetch_by_template(name, hash = {})
-    request = managedObjectModel.
-      objc_send(:fetchRequestFromTemplateWithName, name,
-                 :substitutionVariables, hash)
+    request = managedObjectModel.fetchRequestFromTemplateWithName name,
+                                 substitutionVariables: hash
     execute_fetch(request)
   end
 
@@ -53,15 +51,14 @@ class PersistentStore < OSX::NSObject
   end
 
   def execute_fetch(request)
-    managedObjectContext.objc_send(:executeFetchRequest, request,
-                                   :error, nil)
+    managedObjectContext.executeFetchRequest: request, error nil
   end
 
   def insert_by_name(name, settings = {})
-    retval = NSEntityDescription.objc_send(:insertNewObjectForEntityForName, name,
-                                           :inManagedObjectContext, managedObjectContext)
+    retval = NSEntityDescription.insertNewObjectForEntityForName name,
+                                 inManagedObjectContext: managedObjectContext
     settings.each do | key, value | 
-      retval.setValue_forKey(value, key)
+      retval.setValue value, forKey: key
     end
     retval
   end
@@ -81,6 +78,6 @@ class PersistentStore < OSX::NSObject
   end
 
   def save
-    managedObjectContext.save_(nil)
+    managedObjectContext.save nil
   end
 end

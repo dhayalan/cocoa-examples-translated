@@ -12,11 +12,11 @@
 		786FBB350F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 786FBB340F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb */; };
 		786FBB390F94E50D00F29BAA /* constants.rb in Resources */ = {isa = PBXBuildFile; fileRef = 786FBB380F94E50D00F29BAA /* constants.rb */; };
 		788425080F963444004FC92B /* Puzzle.rb in Resources */ = {isa = PBXBuildFile; fileRef = 788425070F963444004FC92B /* Puzzle.rb */; };
+		7896A1AF0FAA401600FB498C /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7896A1AE0FAA401600FB498C /* MacRuby.framework */; };
 		78B2AFA30F97CE1B00D2D6E9 /* util.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78B2AFA20F97CE1B00D2D6E9 /* util.rb */; };
 		78B2AFAC0F97CFDB00D2D6E9 /* BoardPosition.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78B2AFAB0F97CFDB00D2D6E9 /* BoardPosition.rb */; };
 		78B2AFC00F97DB4E00D2D6E9 /* ApplicationSupport.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78B2AFBF0F97DB4E00D2D6E9 /* ApplicationSupport.rb */; };
 		78B2AFCB0F97DDBE00D2D6E9 /* PersistentStore.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78B2AFCA0F97DDBE00D2D6E9 /* PersistentStore.rb */; };
-		78BD9D2A0F8E98990031A3E7 /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */; };
 		78BD9D2E0F8E98DD0031A3E7 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */; };
 		78BD9D310F8E99170031A3E7 /* TilesView.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78BD9D300F8E99170031A3E7 /* TilesView.rb */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -39,11 +39,11 @@
 		786FBB340F94E3EE00F29BAA /* TilePuzzleAppDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TilePuzzleAppDelegate.rb; sourceTree = "<group>"; };
 		786FBB380F94E50D00F29BAA /* constants.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = constants.rb; sourceTree = "<group>"; };
 		788425070F963444004FC92B /* Puzzle.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Puzzle.rb; sourceTree = "<group>"; };
+		7896A1AE0FAA401600FB498C /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = /Library/Frameworks/MacRuby.framework; sourceTree = "<absolute>"; };
 		78B2AFA20F97CE1B00D2D6E9 /* util.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = util.rb; sourceTree = "<group>"; };
 		78B2AFAB0F97CFDB00D2D6E9 /* BoardPosition.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = BoardPosition.rb; sourceTree = "<group>"; };
 		78B2AFBF0F97DB4E00D2D6E9 /* ApplicationSupport.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ApplicationSupport.rb; sourceTree = "<group>"; };
 		78B2AFCA0F97DDBE00D2D6E9 /* PersistentStore.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PersistentStore.rb; sourceTree = "<group>"; };
-		78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		78BD9D2D0F8E98DD0031A3E7 /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		78BD9D300F8E99170031A3E7 /* TilesView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = TilesView.rb; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				78BD9D2A0F8E98990031A3E7 /* RubyCocoa.framework in Frameworks */,
+				7896A1AF0FAA401600FB498C /* MacRuby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +79,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7896A1AE0FAA401600FB498C /* MacRuby.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -90,7 +91,6 @@
 				77C82804067257F0000B614F /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				78BD9D290F8E98990031A3E7 /* RubyCocoa.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
