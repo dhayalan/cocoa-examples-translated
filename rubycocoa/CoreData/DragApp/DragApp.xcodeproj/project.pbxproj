@@ -12,6 +12,9 @@
 		770B37ED0679A11B001EADE2 /* DragApp_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* DragApp_DataModel.xcdatamodel */; };
 		77C8280D06725ACE000B614F /* DragAppAppDelegate.h in Resources */ = {isa = PBXBuildFile; fileRef = 77C8280B06725ACE000B614F /* DragAppAppDelegate.h */; };
 		77C8280E06725ACE000B614F /* DragAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* DragAppAppDelegate.m */; };
+		78D66BD00FBB35F2001F0290 /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D66BCF0FBB35F2001F0290 /* RubyCocoa.framework */; };
+		78D66C590FBB3646001F0290 /* path-setting.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78D66C580FBB3646001F0290 /* path-setting.rb */; };
+		78D66C5B0FBB3654001F0290 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78D66C5A0FBB3654001F0290 /* rb_main.rb */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -33,6 +36,9 @@
 		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		77C8280B06725ACE000B614F /* DragAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragAppAppDelegate.h; sourceTree = "<group>"; };
 		77C8280C06725ACE000B614F /* DragAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragAppAppDelegate.m; sourceTree = "<group>"; };
+		78D66BCF0FBB35F2001F0290 /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
+		78D66C580FBB3646001F0290 /* path-setting.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "path-setting.rb"; sourceTree = "<group>"; };
+		78D66C5A0FBB3654001F0290 /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* DragApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -43,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				78D66BD00FBB35F2001F0290 /* RubyCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +78,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78D66BCF0FBB35F2001F0290 /* RubyCocoa.framework */,
 				77C82804067257F0000B614F /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
@@ -103,6 +111,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				78D66C5A0FBB3654001F0290 /* rb_main.rb */,
+				78D66C580FBB3646001F0290 /* path-setting.rb */,
 				32CA4F630368D1EE00C91783 /* DragApp_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -183,6 +193,8 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				77C8280D06725ACE000B614F /* DragAppAppDelegate.h in Resources */,
 				04A7270A08A80EC10043729F /* README in Resources */,
+				78D66C590FBB3646001F0290 /* path-setting.rb in Resources */,
+				78D66C5B0FBB3654001F0290 /* rb_main.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
