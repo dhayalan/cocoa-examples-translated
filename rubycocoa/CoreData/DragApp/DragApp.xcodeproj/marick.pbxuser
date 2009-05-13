@@ -1,0 +1,60 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = 787CF10A0FBB03EA00117717 /* DragApp */;
+		activeTarget = 8D1107260486CEB800E47090 /* DragApp */;
+		codeSenseManager = 787CF1170FBB040B00117717 /* Code sense */;
+		executables = (
+			787CF10A0FBB03EA00117717 /* DragApp */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 263914474;
+			PBXWorkspaceStateSaveDate = 263914474;
+		};
+		sourceControlManager = 787CF1160FBB040B00117717 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	787CF10A0FBB03EA00117717 /* DragApp */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = DragApp;
+		sourceDirectories = (
+		);
+	};
+	787CF1160FBB040B00117717 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	787CF1170FBB040B00117717 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8D1107260486CEB800E47090 /* DragApp */ = {
+		activeExec = 0;
+		executables = (
+			787CF10A0FBB03EA00117717 /* DragApp */,
+		);
+	};
+}
