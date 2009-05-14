@@ -17,8 +17,8 @@ class PersistentStore < OSX::NSObject
 
     @managedObjectModel = NSManagedObjectModel.mergedModelFromBundles(allBundles.allObjects)
 
-    app_support = ApplicationSupport.alloc.initForApp("TilePuzzle")
-    @is_fresh = ! app_support.file_exists?("TilePuzzle.xml")
+    app_support = ApplicationSupport.new("TilePuzzle")
+    @is_fresh = ! app_support.contains_file?("TilePuzzle.xml")
     
     coordinator = NSPersistentStoreCoordinator.alloc.initWithManagedObjectModel(managedObjectModel)
     coordinator.objc_send(:addPersistentStoreWithType, NSXMLStoreType,

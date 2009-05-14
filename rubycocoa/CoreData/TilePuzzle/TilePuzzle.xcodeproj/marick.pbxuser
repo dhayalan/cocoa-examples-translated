@@ -2,7 +2,7 @@
 {
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecture = i386;
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 7837DD660F8D53E100EDF6A8 /* TilePuzzle */;
 		activeTarget = 8D1107260486CEB800E47090 /* TilePuzzle */;
 		addToTargets = (
@@ -71,12 +71,12 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 263927197;
-			PBXWorkspaceStateSaveDate = 263927197;
+			PBXPerProjectTemplateStateSaveDate = 264028182;
+			PBXWorkspaceStateSaveDate = 264028182;
 		};
 		perUserProjectItems = {
 			78B530D50FBB35B500F9A12A /* XDModelBookmark */ = 78B530D50FBB35B500F9A12A /* XDModelBookmark */;
-			78D2264A0FA6190600D42D6B /* XDModelBookmark */ = 78D2264A0FA6190600D42D6B /* XDModelBookmark */;
+			78B712120FBCCD87008E7CBA /* XDModelBookmark */ = 78B712120FBCCD87008E7CBA /* XDModelBookmark */;
 		};
 		sourceControlManager = 7837DD6B0F8D53FF00EDF6A8 /* Source Control */;
 		userBuildSettings = {
@@ -282,6 +282,11 @@
 		isa = XDModelBookmark;
 		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
 		fallbackIsa = PBXBookmark;
+	};
+	78B712120FBCCD87008E7CBA /* XDModelBookmark */ = {
+		isa = XDModelBookmark;
+		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
+		fallbackIsa = PBXBookmark;
 		uiCtxt = {
 			UIContextForDetailArea = {
 				_indexOfSelectedPane = 0;
@@ -440,11 +445,6 @@
 			"xdesign model selected properties key" = (
 			);
 		};
-	};
-	78D2264A0FA6190600D42D6B /* XDModelBookmark */ = {
-		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* TilePuzzle_DataModel.xcdatamodel */;
-		fallbackIsa = PBXBookmark;
 	};
 	8D1107260486CEB800E47090 /* TilePuzzle */ = {
 		activeExec = 0;
