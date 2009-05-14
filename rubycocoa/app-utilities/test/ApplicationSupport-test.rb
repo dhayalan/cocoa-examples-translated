@@ -1,5 +1,7 @@
 require File.expand_path("#{File.dirname(__FILE__)}/path-setting")
 require 'ApplicationSupport'
+require 'Oopsies'
+require 'test/notification-utils'
 
 class ApplicationSupportTest < Test::Unit::TestCase
   include OSX
@@ -56,16 +58,35 @@ class ApplicationSupportTest < Test::Unit::TestCase
     end
 
     should "create the application's directory if needed" do
-      during { 
+      during {
         ApplicationSupport.new("AppName", @test_options).pathname
       }.behold! {
         @file_manager.should_receive(:fileExistsAtPath, 1).once.
                       with("/userhome/AppName").
                       and_return(false)
-        @file_manager.should_receive(:createDirectoryAtPath_attributes, 2).once.
-                      with("/userhome/AppName", nil)
+        @file_manager.should_receive(:createDirectoryAtPath_withIntermediateDirectories_attributes_error, 3).once.
+                      with(any, any, any).
+                      and_return([true])
                   
       }
     end
+
+    should "notify someone who cares if directory cannot be created" do
+      inject_watchers_for(Oopsy::Could_not_create_application_directory)
+      during {
+        ApplicationSupport.new("AppName", @test_options).pathname
+      }.behold! {
+        @file_manager.should_receive(:fileExistsAtPath, 1).once.
+                      with("/userhome/AppName").
+                      and_return(false)
+        @file_manager.should_receive(:createDirectoryAtPath_withIntermediateDirectories_attributes_error, 3).once.
+                      with(any, any, any).
+                      and_return([false, :an_NSError])
+        watchers_are_notified.once.with(this_notification(Oopsy::Could_not_create_application_directory,
+                                                          any,
+                                                          { :error => :an_NSError }))
+      }
+    end
+
   end
 end

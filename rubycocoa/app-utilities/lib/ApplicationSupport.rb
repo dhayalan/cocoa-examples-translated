@@ -1,3 +1,5 @@
+require 'osx/cocoa'
+
 class ApplicationSupport
   include OSX
 
@@ -24,8 +26,13 @@ class ApplicationSupport
   end
 
   def force_directory_to_exist(name)
-    unless @file_manager.fileExistsAtPath(name)
-      @file_manager.createDirectoryAtPath_attributes(name, nil)
+    return if @file_manager.fileExistsAtPath(name)
+    result, error = @file_manager.createDirectoryAtPath_withIntermediateDirectories_attributes_error(name, true, nil)
+    unless result
+      outbox = NotificationOutBox.new(:local, :sender => self)
+      outbox.post(Oopsy::Could_not_create_application_directory,
+                  :error => error)
+                          
     end
   end
 end
