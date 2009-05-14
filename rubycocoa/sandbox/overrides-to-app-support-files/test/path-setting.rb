@@ -6,11 +6,6 @@ RubyCocoaLocations.do_not_use_site_specific_libs_and_gems
 RubyCocoaLocations.put_apps_third_party_libs_and_gems_in_load_path
 RubyCocoaLocations.put_apps_ruby_source_in_load_path
 
-def RubyCocoaLocations.sandbox_root
-  File.join(RubyCocoaLocations.dir_containing('sandbox.rb'), 'sandbox')
-end
-
-
 Gem.use_paths(nil, Gem.path + [File.join(RubyCocoaLocations.sandbox_root, 'gems')])
 $: << File.join(RubyCocoaLocations.sandbox_root, 'lib')
 $: << RubyCocoaLocations.root_for_ruby_files   # To load files like 'test/util'
