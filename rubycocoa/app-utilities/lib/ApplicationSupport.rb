@@ -17,6 +17,11 @@ class ApplicationSupport
     NSURL.fileURLWithPath(pathname)
   end
 
+  def contains_file?(name)
+    full_path = pathname.stringByAppendingPathComponent(name)
+    @file_manager.fileExistsAtPath(full_path)
+  end
+
   private
 
   def discover_pathname(app_name)

@@ -6,23 +6,24 @@ require 'test/notification-utils'
 class ApplicationSupportTest < Test::Unit::TestCase
   include OSX
   
+  def setup
+    @file_manager = rubycocoa_flexmock("file manager")
+    @low_level_fileops = rubycocoa_flexmock("low level file operations")
+    @test_options = {
+      :file_manager => @file_manager,
+      :low_level_fileops => @low_level_fileops
+    }
+
+    @low_level_fileops.should_receive('NSSearchPathForDirectoriesInDomains', 3).
+                       and_return(['/userhome/appsupport'].to_ns).
+                       by_default
+    @file_manager.should_receive(:fileExistsAtPath, 1).
+                  and_return(true).
+                  by_default
+  end
+
   context "initialization" do
 
-    setup do 
-      @file_manager = rubycocoa_flexmock("file manager")
-      @low_level_fileops = rubycocoa_flexmock("low level file operations")
-      @test_options = {
-        :file_manager => @file_manager,
-        :low_level_fileops => @low_level_fileops
-      }
-
-      @low_level_fileops.should_receive('NSSearchPathForDirectoriesInDomains', 3).
-                         and_return(['/userhome'].to_ns).
-                         by_default
-      @file_manager.should_receive(:fileExistsAtPath, 1).
-                    and_return(true).
-                    by_default
-    end
 
     should "ask Cocoa to give the user domain's application support" do
       during { 
@@ -30,7 +31,7 @@ class ApplicationSupportTest < Test::Unit::TestCase
       }.behold! {
         @low_level_fileops.should_receive('NSSearchPathForDirectoriesInDomains', 3).once.
                            with(NSApplicationSupportDirectory, NSUserDomainMask, any).
-                           and_return(['/userhome'].to_ns)
+                           and_return(['/userhome/appsupport'].to_ns)
       }
     end
 
@@ -41,20 +42,20 @@ class ApplicationSupportTest < Test::Unit::TestCase
       }.behold! {
         @low_level_fileops.should_receive('NSSearchPathForDirectoriesInDomains', 3).once.
                            with(any, any, true).
-                           and_return(['/userhome'].to_ns)
+                           and_return(['/userhome/appsupport'].to_ns)
       }
     end
 
     should "add the application name to the the application support directory" do
       as = ApplicationSupport.new("AppName", @test_options)
-      assert { as.pathname == "/userhome/AppName" }
+      assert { as.pathname == "/userhome/appsupport/AppName" }
     end
 
     should "also be able to return a URL." do
       as = ApplicationSupport.new("AppName", @test_options)
       # Equality is pointer-equality for NSURLs.
       assert { as.url.absoluteString ==
-               NSURL.fileURLWithPath("/userhome/AppName").absoluteString }
+               NSURL.fileURLWithPath("/userhome/appsupport/AppName").absoluteString }
     end
 
     should "create the application's directory if needed" do
@@ -62,7 +63,7 @@ class ApplicationSupportTest < Test::Unit::TestCase
         ApplicationSupport.new("AppName", @test_options).pathname
       }.behold! {
         @file_manager.should_receive(:fileExistsAtPath, 1).once.
-                      with("/userhome/AppName").
+                      with("/userhome/appsupport/AppName").
                       and_return(false)
         @file_manager.should_receive(:createDirectoryAtPath_withIntermediateDirectories_attributes_error, 3).once.
                       with(any, any, any).
@@ -77,7 +78,7 @@ class ApplicationSupportTest < Test::Unit::TestCase
         ApplicationSupport.new("AppName", @test_options).pathname
       }.behold! {
         @file_manager.should_receive(:fileExistsAtPath, 1).once.
-                      with("/userhome/AppName").
+                      with("/userhome/appsupport/AppName").
                       and_return(false)
         @file_manager.should_receive(:createDirectoryAtPath_withIntermediateDirectories_attributes_error, 3).once.
                       with(any, any, any).
@@ -88,5 +89,18 @@ class ApplicationSupportTest < Test::Unit::TestCase
       }
     end
 
+  end
+
+  context "file operations" do
+    should "tell that a file exists" do
+      during { 
+        @result = ApplicationSupport.new("ThisApp", @test_options).contains_file?("there.xml")
+      }.behold! {
+        @file_manager.should_receive(:fileExistsAtPath, 1).once.
+                      with("/userhome/appsupport/ThisApp/there.xml").
+                      and_return(true)
+      }
+      assert { @result == true }
+    end
   end
 end
