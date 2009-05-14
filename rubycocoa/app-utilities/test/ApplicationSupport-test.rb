@@ -102,5 +102,15 @@ class ApplicationSupportTest < Test::Unit::TestCase
       }
       assert { @result == true }
     end
+
+    should "convert a file name to a URL" do
+      result = ApplicationSupport.new("ThisApp", @test_options).file_url("there.xml")
+      # Equality is pointer-equality for NSURLs.
+      assert { result.absoluteString ==
+               NSURL.fileURLWithPath("/userhome/appsupport/there.xml").absoluteString }
+    end
+
+    should_eventually "convert file name even if file does not exist." do
+    end
   end
 end
