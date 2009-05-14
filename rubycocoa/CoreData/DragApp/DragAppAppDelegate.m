@@ -62,17 +62,9 @@
 }
 
 /* Change this path/code to point to your App's data store. */
+// DONE
 - (NSString *)applicationSupportFolder {
-
-    NSString *applicationSupportFolder = nil;
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
-    if ( [paths count] == 0 ) {
-        NSRunAlertPanel(@"Alert", @"Can't find application support folder", @"Quit", nil, nil);
-        [[NSApplication sharedApplication] terminate:self];
-    } else {
-        applicationSupportFolder = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"DragApp"];
-    }
-    return applicationSupportFolder;
+    return @"overridden";
 }
 
 - (NSManagedObjectContext *) managedObjectContext {

@@ -1,8 +1,15 @@
 // !$*UTF8*$!
 {
+	0492795A0868D8DE00860D8E /* DragSupportDataSource.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1568, 2868}}";
+			sepNavSelRange = "{8673, 0}";
+			sepNavVisRange = "{3658, 552}";
+		};
+	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecture = i386;
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 787CF10A0FBB03EA00117717 /* DragApp */;
 		activeTarget = 8D1107260486CEB800E47090 /* DragApp */;
 		addToTargets = (
@@ -20,7 +27,7 @@
 					20,
 					243,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -35,29 +42,11 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 263927242;
-			PBXWorkspaceStateSaveDate = 263927242;
-		};
-		perUserProjectItems = {
-			787CF1190FBB049600117717 = 787CF1190FBB049600117717 /* PBXBookmark */;
-			787CF1210FBB34BA00117717 = 787CF1210FBB34BA00117717 /* PBXBookmark */;
-			787CF12B0FBB357E00117717 = 787CF12B0FBB357E00117717 /* XDModelBookmark */;
-			787CF12E0FBB357E00117717 = 787CF12E0FBB357E00117717 /* PBXTextBookmark */;
-			787CF12F0FBB357E00117717 = 787CF12F0FBB357E00117717 /* PBXTextBookmark */;
-			787CF1320FBB357E00117717 = 787CF1320FBB357E00117717 /* PBXTextBookmark */;
-			787CF1330FBB357E00117717 = 787CF1330FBB357E00117717 /* PBXTextBookmark */;
-			787CF1360FBB357E00117717 = 787CF1360FBB357E00117717 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 263960553;
+			PBXWorkspaceStateSaveDate = 263960553;
 		};
 		sourceControlManager = 787CF1160FBB040B00117717 /* Source Control */;
 		userBuildSettings = {
-		};
-	};
-	29B97316FDCFA39411CA2CEA /* main.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {829, 750}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 154}";
-			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
 	};
 	770B37EC0679A11B001EADE2 /* DragApp_DataModel.xcdatamodel */ = {
@@ -86,7 +75,7 @@
 					chosenTableWidths = (
 						103.000000,
 						22.000000,
-						118.080078,
+						117.080078,
 					);
 				};
 				UIContextForLayoutManager = {
@@ -107,7 +96,7 @@
 						isCollapsed = yes;
 						sizes = (
 							"{{0, 0}, {888, 220}}",
-							"{{0, 225}, {888, 540}}",
+							"{{0, 225}, {888, 517}}",
 						);
 					};
 					tableSplitGeometry = {
@@ -116,8 +105,8 @@
 						_percentageOfCollapsedView = 0;
 						isCollapsed = yes;
 						sizes = (
-							"{{0, 0}, {268, 220}}",
-							"{{273, 0}, {306, 220}}",
+							"{{0, 0}, {267, 220}}",
+							"{{272, 0}, {305, 220}}",
 						);
 					};
 				};
@@ -214,7 +203,7 @@
 					);
 				};
 				"xdesign model browser state key - shown/hidden" = 1;
-				"xdesign model diagram view visible rect key" = "{{-113, -47}, {873, 525}}";
+				"xdesign model diagram view visible rect key" = "{{-113, -35}, {873, 502}}";
 			};
 			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
@@ -223,15 +212,15 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {829, 924}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{504, 2347}";
+			sepNavVisRange = "{431, 2415}";
 			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
 	};
 	77C8280C06725ACE000B614F /* DragAppAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {829, 2016}}";
-			sepNavSelRange = "{2782, 0}";
-			sepNavVisRange = "{2373, 1813}";
+			sepNavIntBoundsRect = "{{0, 0}, {829, 1862}}";
+			sepNavSelRange = "{5681, 0}";
+			sepNavVisRange = "{572, 2435}";
 			sepNavWindowFrame = "{{19, -5}, {888, 878}}";
 		};
 	};
@@ -256,6 +245,8 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = DragApp;
+		savedGlobals = {
+		};
 		sourceDirectories = (
 		);
 	};
@@ -269,66 +260,6 @@
 	787CF1170FBB040B00117717 /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
-	};
-	787CF1190FBB049600117717 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* DragApp_DataModel.xcdatamodel */;
-	};
-	787CF1210FBB34BA00117717 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
-	};
-	787CF12B0FBB357E00117717 /* XDModelBookmark */ = {
-		isa = XDModelBookmark;
-		fRef = 770B37EC0679A11B001EADE2 /* DragApp_DataModel.xcdatamodel */;
-		fallbackIsa = PBXBookmark;
-	};
-	787CF12E0FBB357E00117717 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 77C8280C06725ACE000B614F /* DragAppAppDelegate.m */;
-		name = "DragAppAppDelegate.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 2669;
-		vrLoc = 0;
-	};
-	787CF12F0FBB357E00117717 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 77C8280C06725ACE000B614F /* DragAppAppDelegate.m */;
-		name = "DragAppAppDelegate.m: 57";
-		rLen = 0;
-		rLoc = 2782;
-		rType = 0;
-		vrLen = 1813;
-		vrLoc = 2373;
-	};
-	787CF1320FBB357E00117717 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 77C8280B06725ACE000B614F /* DragAppAppDelegate.h */;
-		rLen = 0;
-		rLoc = 2147483647;
-		rType = 0;
-	};
-	787CF1330FBB357E00117717 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 77C8280B06725ACE000B614F /* DragAppAppDelegate.h */;
-		name = "DragAppAppDelegate.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 2347;
-		vrLoc = 504;
-	};
-	787CF1360FBB357E00117717 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
-		name = "main.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 154;
-		vrLoc = 0;
 	};
 	8D1107260486CEB800E47090 /* DragApp */ = {
 		activeExec = 0;

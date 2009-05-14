@@ -3,8 +3,6 @@
 # bundle. It also prevents libraries and gems that are not in the app
 # bundle from being required (except for the ones Apple provides to
 # everyone).
-#
-# Created by Brian Marick (marick@exampler.com) on 5/10/08.
 
 require 'osx/cocoa'
 require 'path-setting'

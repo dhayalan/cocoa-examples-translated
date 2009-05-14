@@ -15,9 +15,11 @@
 		78D66BD00FBB35F2001F0290 /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D66BCF0FBB35F2001F0290 /* RubyCocoa.framework */; };
 		78D66C590FBB3646001F0290 /* path-setting.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78D66C580FBB3646001F0290 /* path-setting.rb */; };
 		78D66C5B0FBB3654001F0290 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78D66C5A0FBB3654001F0290 /* rb_main.rb */; };
+		78D66C600FBB4228001F0290 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = 78D66C5F0FBB4228001F0290 /* AppDelegate.rb */; };
+		78D66C670FBB6BC0001F0290 /* third-party in Resources */ = {isa = PBXBuildFile; fileRef = 78D66C620FBB6BC0001F0290 /* third-party */; };
+		78D66C950FBBB45B001F0290 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D66C940FBBB45B001F0290 /* main.m */; };
 		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
-		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +29,6 @@
 		04A7270908A80EC10043729F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -39,6 +40,9 @@
 		78D66BCF0FBB35F2001F0290 /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
 		78D66C580FBB3646001F0290 /* path-setting.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "path-setting.rb"; sourceTree = "<group>"; };
 		78D66C5A0FBB3654001F0290 /* rb_main.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+		78D66C5F0FBB4228001F0290 /* AppDelegate.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		78D66C620FBB6BC0001F0290 /* third-party */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "third-party"; sourceTree = "<group>"; };
+		78D66C940FBBB45B001F0290 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* DragApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -59,6 +63,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				78D66C620FBB6BC0001F0290 /* third-party */,
+				78D66C5F0FBB4228001F0290 /* AppDelegate.rb */,
 				77C8280B06725ACE000B614F /* DragAppAppDelegate.h */,
 				77C8280C06725ACE000B614F /* DragAppAppDelegate.m */,
 				049279590868D8DE00860D8E /* DragSupportDataSource.h */,
@@ -111,10 +117,10 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				78D66C940FBBB45B001F0290 /* main.m */,
 				78D66C5A0FBB3654001F0290 /* rb_main.rb */,
 				78D66C580FBB3646001F0290 /* path-setting.rb */,
 				32CA4F630368D1EE00C91783 /* DragApp_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 				04A7270A08A80EC10043729F /* README in Resources */,
 				78D66C590FBB3646001F0290 /* path-setting.rb in Resources */,
 				78D66C5B0FBB3654001F0290 /* rb_main.rb in Resources */,
+				78D66C600FBB4228001F0290 /* AppDelegate.rb in Resources */,
+				78D66C670FBB6BC0001F0290 /* third-party in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,10 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				77C8280E06725ACE000B614F /* DragAppAppDelegate.m in Sources */,
 				770B37ED0679A11B001EADE2 /* DragApp_DataModel.xcdatamodel in Sources */,
 				0492795B0868D8DE00860D8E /* DragSupportDataSource.m in Sources */,
+				78D66C950FBBB45B001F0290 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

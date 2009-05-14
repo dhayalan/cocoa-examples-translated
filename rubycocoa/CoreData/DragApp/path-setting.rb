@@ -54,6 +54,9 @@ module RubyCocoaLocations
     root_for_ruby_files
   end
 
+  def self.sandbox_root
+    File.join(RubyCocoaLocations.dir_containing('sandbox.rb'), 'sandbox')
+  end
 
 # Util
 
