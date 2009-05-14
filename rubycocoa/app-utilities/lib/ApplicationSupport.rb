@@ -18,8 +18,11 @@ class ApplicationSupport
   end
 
   def contains_file?(name)
-    full_path = pathname.stringByAppendingPathComponent(name)
-    @file_manager.fileExistsAtPath(full_path)
+    @file_manager.fileExistsAtPath(file_path(name))
+  end
+
+  def file_url(name)
+    NSURL.fileURLWithPath(file_path(name))
   end
 
   private
@@ -39,5 +42,9 @@ class ApplicationSupport
                   :error => error)
                           
     end
+  end
+
+  def file_path(name)
+    pathname.stringByAppendingPathComponent(name)
   end
 end

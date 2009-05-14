@@ -107,10 +107,18 @@ class ApplicationSupportTest < Test::Unit::TestCase
       result = ApplicationSupport.new("ThisApp", @test_options).file_url("there.xml")
       # Equality is pointer-equality for NSURLs.
       assert { result.absoluteString ==
-               NSURL.fileURLWithPath("/userhome/appsupport/there.xml").absoluteString }
+               NSURL.fileURLWithPath("/userhome/appsupport/ThisApp/there.xml").absoluteString }
     end
 
-    should_eventually "convert file name even if file does not exist." do
+    should "convert file name even if file does not exist." do
+      during { 
+        @result = ApplicationSupport.new("ThisApp", @test_options).file_url("notthere.xml")
+      }.behold! {
+        @file_manager.should_receive(:fileExistsAtPath, 1).
+                      with("/userhome/appsupport/ThisApp/notthere.xml").never
+      }
+      assert { @result.absoluteString ==
+               NSURL.fileURLWithPath("/userhome/appsupport/ThisApp/notthere.xml").absoluteString }
     end
   end
 end
